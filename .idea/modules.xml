@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Bank Account/Bank Account.iml" filepath="$PROJECT_DIR$/Bank Account/Bank Account.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Carpet Calculator/Carpet Calculator.iml" filepath="$PROJECT_DIR$/Carpet Calculator/Carpet Calculator.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Course Grades/Course Grades.iml" filepath="$PROJECT_DIR$/Course Grades/Course Grades.iml" />
+      <module fileurl="file://$PROJECT_DIR$/File Not Found/File Not Found.iml" filepath="$PROJECT_DIR$/File Not Found/File Not Found.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Parking Ticket Simulator/Parking Ticket Simulator.iml" filepath="$PROJECT_DIR$/Parking Ticket Simulator/Parking Ticket Simulator.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Password Verifier/Password Verifier.iml" filepath="$PROJECT_DIR$/Password Verifier/Password Verifier.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Sum of Digits/Sum of Digits.iml" filepath="$PROJECT_DIR$/Sum of Digits/Sum of Digits.iml" />
+    </modules>
+  </component>
+</project>
