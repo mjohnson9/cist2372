@@ -5,9 +5,18 @@ import java.awt.GridLayout;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 
+/**
+ * ResultsFrame displays the results of an EntryFrame.
+ */
 public class ResultsFrame extends JFrame {
 
-  public ResultsFrame(Expenses expenses) {
+  /**
+   * Construct a ResultsFrame with the specified expenses.
+   *
+   * @param expenses The expenses to base the displayed results on.
+   */
+  public ResultsFrame(final Expenses expenses) {
+    super();
     this.setSize(380, 100);
     this.setLayout(new GridLayout(3, 1));
     this.setMinimumSize(new Dimension(380, 100));

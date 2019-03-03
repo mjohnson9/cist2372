@@ -10,17 +10,21 @@ import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 
+/**
+ * EntryFrame is a frame for entering company travel expenses. It takes responsibility for
+ * continuation of the program.
+ */
 public class EntryFrame extends JFrame {
 
-  private JTextField daysField = new JTextField(8);
-  private JTextField airfareField = new JTextField("0.00", 8);
-  private JTextField rentalFeesField = new JTextField("0.00", 8);
-  private JTextField milesDrivenField = new JTextField("0.0", 8);
-  private JTextField parkingFeesField = new JTextField("0.00", 8);
-  private JTextField taxiFeesField = new JTextField("0.00", 8);
-  private JTextField conferenceFeesField = new JTextField("0.00", 8);
-  private JTextField lodgingFeesField = new JTextField("0.00", 8);
-  private JButton submitButton = new JButton("Submit");
+  private final JTextField daysField = new JTextField(8);
+  private final JTextField airfareField = new JTextField("0.00", 8);
+  private final JTextField rentalFeesField = new JTextField("0.00", 8);
+  private final JTextField milesDrivenField = new JTextField("0.0", 8);
+  private final JTextField parkingFeesField = new JTextField("0.00", 8);
+  private final JTextField taxiFeesField = new JTextField("0.00", 8);
+  private final JTextField conferenceFeesField = new JTextField("0.00", 8);
+  private final JTextField lodgingFeesField = new JTextField("0.00", 8);
+  private final JButton submitButton = new JButton("Submit");
 
   public EntryFrame() {
     super();
@@ -61,9 +65,10 @@ public class EntryFrame extends JFrame {
   private class SubmitHandler implements ActionListener {
 
     @Override
-    public void actionPerformed(ActionEvent event) {
-      Expenses expenses = new Expenses();
+    public void actionPerformed(final ActionEvent event) {
+      final Expenses expenses = new Expenses();
 
+      // If any of the handler functions return false, they failed to parse. In that case, do nothing.
       if (!this.handleDays(expenses)) {
         return;
       }
@@ -89,16 +94,16 @@ public class EntryFrame extends JFrame {
         return;
       }
 
-      setVisible(false);
+      EntryFrame.this.setVisible(false);
 
-      ResultsFrame resultsFrame = new ResultsFrame(expenses);
+      final ResultsFrame resultsFrame = new ResultsFrame(expenses);
       resultsFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
       resultsFrame.setVisible(true);
     }
 
-    private boolean handleDays(Expenses expenses) {
+    private boolean handleDays(final Expenses expenses) {
       try {
-        final int numDays = Integer.parseInt(daysField.getText());
+        final int numDays = Integer.parseInt(EntryFrame.this.daysField.getText());
 
         if (numDays < 0) {
           JOptionPane.showMessageDialog(EntryFrame.this, "The number of days cannot be negative.");
@@ -111,84 +116,95 @@ public class EntryFrame extends JFrame {
 
         expenses.setDays(numDays);
         return true;
-      } catch (NumberFormatException e) {
+      } catch (final NumberFormatException e) {
         JOptionPane.showMessageDialog(EntryFrame.this,
             "The number of days that you entered is not a valid number. Please enter a number.");
         return false;
       }
     }
 
-    private boolean handleAirfare(Expenses expenses) {
+    private boolean handleAirfare(final Expenses expenses) {
       try {
-        expenses.setAirfare(this.parseField(airfareField, "airfare"));
+        expenses.setAirfare(this.parseField(EntryFrame.this.airfareField, "airfare"));
         return true;
-      } catch (IllegalArgumentException e) {
+      } catch (final IllegalArgumentException e) {
         JOptionPane.showMessageDialog(EntryFrame.this, e.getMessage());
         return false;
       }
     }
 
-    private boolean handleRentalFees(Expenses expenses) {
+    private boolean handleRentalFees(final Expenses expenses) {
       try {
-        expenses.setRentalFees(this.parseField(rentalFeesField, "rental fees"));
+        expenses.setRentalFees(this.parseField(EntryFrame.this.rentalFeesField, "rental fees"));
         return true;
-      } catch (IllegalArgumentException e) {
+      } catch (final IllegalArgumentException e) {
         JOptionPane.showMessageDialog(EntryFrame.this, e.getMessage());
         return false;
       }
     }
 
-    private boolean handleMilesDriven(Expenses expenses) {
+    private boolean handleMilesDriven(final Expenses expenses) {
       try {
-        expenses.setMilesDriven(this.parseField(milesDrivenField, "miles driven"));
+        expenses.setMilesDriven(this.parseField(EntryFrame.this.milesDrivenField, "miles driven"));
         return true;
-      } catch (IllegalArgumentException e) {
+      } catch (final IllegalArgumentException e) {
         JOptionPane.showMessageDialog(EntryFrame.this, e.getMessage());
         return false;
       }
     }
 
-    private boolean handleParkingFees(Expenses expenses) {
+    private boolean handleParkingFees(final Expenses expenses) {
       try {
-        expenses.setParkingFees(this.parseField(parkingFeesField, "parking fees"));
+        expenses.setParkingFees(this.parseField(EntryFrame.this.parkingFeesField, "parking fees"));
         return true;
-      } catch (IllegalArgumentException e) {
+      } catch (final IllegalArgumentException e) {
         JOptionPane.showMessageDialog(EntryFrame.this, e.getMessage());
         return false;
       }
     }
 
-    private boolean handleTaxiFees(Expenses expenses) {
+    private boolean handleTaxiFees(final Expenses expenses) {
       try {
-        expenses.setTaxiFees(this.parseField(taxiFeesField, "taxi fees"));
+        expenses.setTaxiFees(this.parseField(EntryFrame.this.taxiFeesField, "taxi fees"));
         return true;
-      } catch (IllegalArgumentException e) {
+      } catch (final IllegalArgumentException e) {
         JOptionPane.showMessageDialog(EntryFrame.this, e.getMessage());
         return false;
       }
     }
 
-    private boolean handleConferenceFees(Expenses expenses) {
+    private boolean handleConferenceFees(final Expenses expenses) {
       try {
-        expenses.setConferenceFees(this.parseField(conferenceFeesField, "conference fees"));
+        expenses.setConferenceFees(
+            this.parseField(EntryFrame.this.conferenceFeesField, "conference fees"));
         return true;
-      } catch (IllegalArgumentException e) {
+      } catch (final IllegalArgumentException e) {
         JOptionPane.showMessageDialog(EntryFrame.this, e.getMessage());
         return false;
       }
     }
 
-    private boolean handleLodgingFees(Expenses expenses) {
+    private boolean handleLodgingFees(final Expenses expenses) {
       try {
-        expenses.setLodgingCost(this.parseField(lodgingFeesField, "lodging fees"));
+        expenses.setLodgingCost(this.parseField(EntryFrame.this.lodgingFeesField, "lodging fees"));
         return true;
-      } catch (IllegalArgumentException e) {
+      } catch (final IllegalArgumentException e) {
         JOptionPane.showMessageDialog(EntryFrame.this, e.getMessage());
         return false;
       }
     }
 
-    private double parseField(JTextField field, String fieldName) throws IllegalArgumentException {
+    /**
+     * Parses a JTextField that's expected to be a dollar amount.
+     *
+     * @param field The field to parse.
+     * @param fieldName The name of the field for error messages.
+     * @return The parsed, validated value.
+     * @throws IllegalArgumentException If the JTextField does not contain a valid dollar amount,
+     * this exception is thrown with a user-friendly message.
+     */
+    private double parseField(final JTextField field, final String fieldName)
+        throws IllegalArgumentException {
       try {
         final double parsed = Double.parseDouble(field.getText());
         if (parsed < 0) {
@@ -196,9 +212,10 @@ public class EntryFrame extends JFrame {
         }
 
         return parsed;
-      } catch (NumberFormatException e) {
+      } catch (final NumberFormatException e) {
         throw new IllegalArgumentException(
-            "The " + fieldName + " must be a decimal number. You did not enter a decimal number.");
+            "The " + fieldName + " must be a decimal number. You did not enter a decimal number.",
+            e);
       }
     }
   }

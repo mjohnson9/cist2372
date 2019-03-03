@@ -1,5 +1,8 @@
 package johnson.michael.travelexpenses;
 
+/**
+ * Expenses holds an employee's travel expenses. It can also calculate their allowance.
+ */
 public class Expenses {
 
   /**
@@ -41,23 +44,6 @@ public class Expenses {
    * The cost of lodging.
    */
   private double lodgingCost;
-
-  public Expenses() {
-  }
-
-  public Expenses(final int days, final double airfare, final double rentalFees,
-      final double milesDriven,
-      final double parkingFees, final double taxiFees, final double conferenceFees,
-      final double lodgingCost) {
-    this.setDays(days);
-    this.setAirfare(airfare);
-    this.setRentalFees(rentalFees);
-    this.setMilesDriven(milesDriven);
-    this.setParkingFees(parkingFees);
-    this.setTaxiFees(taxiFees);
-    this.setConferenceFees(conferenceFees);
-    this.setLodgingCost(lodgingCost);
-  }
 
   /**
    * Calculates the amount owed as a result of the expenses.
@@ -101,90 +87,130 @@ public class Expenses {
   }
 
   /**
-   * The number of days spent on the trip.
+   * @return The number of days spent on the trip.
    */
   public int getDays() {
-    return days;
+    return this.days;
   }
 
-  public void setDays(int days) {
+  /**
+   * Sets the number of days that the trip lasted.
+   *
+   * @param days The number of days the trip lasted.
+   */
+  public void setDays(final int days) {
     this.days = days;
   }
 
   /**
-   * The cost of flying.
+   * @return The airfare cost.
    */
   public double getAirfare() {
-    return airfare;
+    return this.airfare;
   }
 
-  public void setAirfare(double airfare) {
+  /**
+   * Sets the airfare cost incurred.
+   *
+   * @param airfare The airfare cost.
+   */
+  public void setAirfare(final double airfare) {
     this.airfare = airfare;
   }
 
   /**
-   * The cost of a rental vehicle.
+   * @return The cost of a rental vehicle.
    */
   public double getRentalFees() {
-    return rentalFees;
+    return this.rentalFees;
   }
 
-  public void setRentalFees(double rentalFees) {
+  /**
+   * Sets the cost of a rental vehicle.
+   *
+   * @param rentalFees The cost of a rental vehicle.
+   */
+  public void setRentalFees(final double rentalFees) {
     this.rentalFees = rentalFees;
   }
 
   /**
-   * The number of miles driven in a personal vehicle.
+   * @return The number of miles driven in a personal vehicle.
    */
   public double getMilesDriven() {
-    return milesDriven;
+    return this.milesDriven;
   }
 
-  public void setMilesDriven(double milesDriven) {
+  /**
+   * Sets the number of miles driven in a private vehicle.
+   *
+   * @param milesDriven The number of miles driven.
+   */
+  public void setMilesDriven(final double milesDriven) {
     this.milesDriven = milesDriven;
   }
 
   /**
-   * The cost of parking.
+   * @return The cost of parking.
    */
   public double getParkingFees() {
-    return parkingFees;
+    return this.parkingFees;
   }
 
-  public void setParkingFees(double parkingFees) {
+  /**
+   * Sets the cost of parking fees.
+   *
+   * @param parkingFees The cost of parking fees.
+   */
+  public void setParkingFees(final double parkingFees) {
     this.parkingFees = parkingFees;
   }
 
   /**
-   * The cost of taxi services.
+   * @return The cost of taxi services.
    */
   public double getTaxiFees() {
-    return taxiFees;
+    return this.taxiFees;
   }
 
-  public void setTaxiFees(double taxiFees) {
+  /**
+   * Sets the cost of taxi services.
+   *
+   * @param taxiFees The cost of taxi services.
+   */
+  public void setTaxiFees(final double taxiFees) {
     this.taxiFees = taxiFees;
   }
 
   /**
-   * The cost of conference or seminar registration.
+   * @return The cost of conference or seminar registration.
    */
   public double getConferenceFees() {
-    return conferenceFees;
+    return this.conferenceFees;
   }
 
-  public void setConferenceFees(double conferenceFees) {
+  /**
+   * Sets the cost of conference fees.
+   *
+   * @param conferenceFees The cost of conference fees.
+   */
+  public void setConferenceFees(final double conferenceFees) {
     this.conferenceFees = conferenceFees;
   }
 
   /**
-   * The cost of lodging.
+   * @return The cost of lodging.
    */
   public double getLodgingCost() {
-    return lodgingCost;
+    return this.lodgingCost;
   }
 
-  public void setLodgingCost(double lodgingCost) {
+  /**
+   * Sets the cost of lodging.
+   *
+   * @param lodgingCost The cost of lodging.
+   */
+  public void setLodgingCost(final double lodgingCost) {
     this.lodgingCost = lodgingCost;
   }
 }
