@@ -17,9 +17,10 @@ public class ResultsFrame extends JFrame {
    */
   public ResultsFrame(final Expenses expenses) {
     super();
-    this.setSize(380, 100);
+
+    this.setTitle("Calculated Travel Expenses");
+
     this.setLayout(new GridLayout(3, 1));
-    this.setMinimumSize(new Dimension(380, 100));
 
     this.add(new JLabel(String.format("Your total expenses: $%,.2f", expenses.getTotal())));
     this.add(new JLabel(String.format("Your total allowance: $%,.2f", expenses.getAllowable())));
@@ -34,5 +35,10 @@ public class ResultsFrame extends JFrame {
       this.add(
           new JLabel(String.format("You were under budget by $%,.2f. You owe nothing.", -owed)));
     }
+
+    this.pack();
+    final Dimension packedSize = this.getSize();
+    this.setMinimumSize(packedSize);
+    this.setSize(packedSize.width + 20, packedSize.height + 20);
   }
 }

@@ -29,37 +29,42 @@ public class EntryFrame extends JFrame {
   public EntryFrame() {
     super();
 
-    this.setSize(500, 300);
-    this.setMinimumSize(new Dimension(500, 300));
+    this.setTitle("Travel Expense Calculator");
+
     this.setLayout(new GridLayout(9, 2, 5, 5));
 
-    this.add(new JLabel("How many days was the trip?"));
+    this.add(new JLabel("How many days was the trip?", JLabel.RIGHT));
     this.add(this.daysField);
 
-    this.add(new JLabel("Airfare:"));
+    this.add(new JLabel("Airfare:", JLabel.RIGHT));
     this.add(this.airfareField);
 
-    this.add(new JLabel("Rental fees:"));
+    this.add(new JLabel("Rental fees:", JLabel.RIGHT));
     this.add(this.rentalFeesField);
 
-    this.add(new JLabel("Miles driven in a personal vehicle:"));
+    this.add(new JLabel("Miles driven in a personal vehicle:", JLabel.RIGHT));
     this.add(this.milesDrivenField);
 
-    this.add(new JLabel("Parking fees:"));
+    this.add(new JLabel("Parking fees:", JLabel.RIGHT));
     this.add(this.parkingFeesField);
 
-    this.add(new JLabel("Taxi fees:"));
+    this.add(new JLabel("Taxi fees:", JLabel.RIGHT));
     this.add(this.taxiFeesField);
 
-    this.add(new JLabel("Conference fees:"));
+    this.add(new JLabel("Conference fees:", JLabel.RIGHT));
     this.add(this.conferenceFeesField);
 
-    this.add(new JLabel("Lodging fees:"));
+    this.add(new JLabel("Lodging fees:", JLabel.RIGHT));
     this.add(this.lodgingFeesField);
 
     this.add(new JLabel());
     this.add(this.submitButton);
     this.submitButton.addActionListener(new SubmitHandler());
+
+    this.pack();
+    final Dimension packedSize = this.getSize();
+    this.setMinimumSize(packedSize);
+    this.setSize(packedSize.width + 20, packedSize.height + 20);
   }
 
   private class SubmitHandler implements ActionListener {
@@ -91,6 +96,12 @@ public class EntryFrame extends JFrame {
         return;
       }
       if (!this.handleLodgingFees(expenses)) {
+        return;
+      }
+
+      if (expenses.getTotal() == 0.00d) {
+        JOptionPane.showMessageDialog(EntryFrame.this,
+            "Are you sure that you had no expenses? Please go back and enter some expenses.");
         return;
       }
 
