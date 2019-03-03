@@ -1,8 +1,14 @@
 package johnson.michael.travelexpenses;
 
+import javax.swing.JFrame;
+
 public class Main {
 
-    public static void main(String[] args) {
-	// write your code here
-    }
+  public static void main(String[] args) {
+    EntryFrame entryFrame = new EntryFrame();
+    entryFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    entryFrame.setVisible(true);
+
+
+  }
 }
