@@ -4,7 +4,6 @@ package johnson.michael.travelexpenses;
  * Expenses holds an employee's travel expenses. It can also calculate their allowance.
  */
 public class Expenses {
-
   /**
    * The number of days spent on the trip.
    */
@@ -46,10 +45,26 @@ public class Expenses {
   private double lodgingCost;
 
   /**
+   * The Expenses constructor initializes all values to 0. Values should be set to sensible numbers
+   * before using the class.
+   */
+  public Expenses() {
+    // Initialize all of our variables
+    this.setDays(0);
+    this.setAirfare(0d);
+    this.setRentalFees(0d);
+    this.setMilesDriven(0d);
+    this.setParkingFees(0d);
+    this.setTaxiFees(0d);
+    this.setConferenceFees(0d);
+    this.setLodgingCost(0d);
+  }
+
+  /**
    * Calculates the amount owed as a result of the expenses.
    *
    * @return The amount owed as a result of the given expenses in dollars. A negative amount means
-   * that the expenses were within budget.
+   *     that the expenses were within budget.
    */
   public double getAmountOwed() {
     return this.getTotal() - this.getAllowable();
@@ -66,6 +81,9 @@ public class Expenses {
     // Why doesn't this company reimburse airfare, car rental, or conference fees?
 
     final double days = (double) this.getDays();
+
+    allowable += this.getAirfare(); // Airfare is always covered
+    allowable += this.getConferenceFees(); // Conference fees are always covered
 
     allowable += 37.00d * days; // $37 per day for meals
     allowable += 10.00d * days; // $10 per day for parking

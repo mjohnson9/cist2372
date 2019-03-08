@@ -2,7 +2,13 @@ package johnson.michael.theaterrevenue;
 
 import javax.swing.JFrame;
 
-public class Main {
+public final class Main {
+
+  /**
+   * Prevents {@code Main} from being instantiated
+   */
+  private Main() {
+  }
 
   public static void main(String[] args) {
     final EntryFrame entryFrame = new EntryFrame();

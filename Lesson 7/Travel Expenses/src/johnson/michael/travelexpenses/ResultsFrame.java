@@ -9,7 +9,6 @@ import javax.swing.JLabel;
  * ResultsFrame displays the results of an EntryFrame.
  */
 public class ResultsFrame extends JFrame {
-
   /**
    * Construct a ResultsFrame with the specified expenses.
    *

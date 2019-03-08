@@ -15,17 +15,47 @@ import javax.swing.JTextField;
  * continuation of the program.
  */
 public class EntryFrame extends JFrame {
-
+  /**
+   * The text field for the number of days that the trip lasted.
+   */
   private final JTextField daysField = new JTextField(8);
+  /**
+   * The text field for the cost of airfare.
+   */
   private final JTextField airfareField = new JTextField("0.00", 8);
+  /**
+   * The text field for the cost of renting a vehicle.
+   */
   private final JTextField rentalFeesField = new JTextField("0.00", 8);
+  /**
+   * The text field for the number of miles driven.
+   */
   private final JTextField milesDrivenField = new JTextField("0.0", 8);
+  /**
+   * The text field for the cost of parking fees.
+   */
   private final JTextField parkingFeesField = new JTextField("0.00", 8);
+  /**
+   * The text field for the cost of using taxis.
+   */
   private final JTextField taxiFeesField = new JTextField("0.00", 8);
+  /**
+   * The text field for the cost of the conference.
+   */
   private final JTextField conferenceFeesField = new JTextField("0.00", 8);
+  /**
+   * The text field for the cost of lodging.
+   */
   private final JTextField lodgingFeesField = new JTextField("0.00", 8);
+  /**
+   * The submit button.
+   */
   private final JButton submitButton = new JButton("Submit");
 
+  /**
+   * Instantiates a new EntryFrame. This assembles all of the entry frame's elements and prepares it
+   * for display.
+   */
   public EntryFrame() {
     super();
 
@@ -67,13 +97,17 @@ public class EntryFrame extends JFrame {
     this.setSize(packedSize.width + 20, packedSize.height + 20);
   }
 
+  /**
+   * {@code SubmitHandler} handles a press of the submit button. It processes the {@code EntryFrame}
+   * text field contents and, if valid, displays a ResultsFrame.
+   */
   private class SubmitHandler implements ActionListener {
-
     @Override
-    public void actionPerformed(final ActionEvent event) {
+    public void actionPerformed(final ActionEvent e) {
       final Expenses expenses = new Expenses();
 
-      // If any of the handler functions return false, they failed to parse. In that case, do nothing.
+      // If any of the handler functions return false, they failed to parse. In that case, do
+      // nothing.
       if (!this.handleDays(expenses)) {
         return;
       }
@@ -112,6 +146,12 @@ public class EntryFrame extends JFrame {
       resultsFrame.setVisible(true);
     }
 
+    /**
+     * Parses the {@code daysField} text field and enters its value into {@code expenses}.
+     * @param expenses The Expenses object to enter the parsed, validated number of days into.
+     * @return A boolean indicating whether or not validation was successful. False on a failed
+     *     parsing or validation.
+     */
     private boolean handleDays(final Expenses expenses) {
       try {
         final int numDays = Integer.parseInt(EntryFrame.this.daysField.getText());
@@ -134,6 +174,12 @@ public class EntryFrame extends JFrame {
       }
     }
 
+    /**
+     * Parses the {@code airfareField} text field and enters its value into {@code expenses}.
+     * @param expenses The Expenses object to enter the parsed, validated airfare into.
+     * @return A boolean indicating whether or not validation was successful. False on a failed
+     *     parsing or validation.
+     */
     private boolean handleAirfare(final Expenses expenses) {
       try {
         expenses.setAirfare(this.parseField(EntryFrame.this.airfareField, "airfare"));
@@ -144,6 +190,12 @@ public class EntryFrame extends JFrame {
       }
     }
 
+    /**
+     * Parses the {@code rentalFeesField} text field and enters its value into {@code expenses}.
+     * @param expenses The Expenses object to enter the parsed, validated rental fees into.
+     * @return A boolean indicating whether or not validation was successful. False on a failed
+     *     parsing or validation.
+     */
     private boolean handleRentalFees(final Expenses expenses) {
       try {
         expenses.setRentalFees(this.parseField(EntryFrame.this.rentalFeesField, "rental fees"));
@@ -154,6 +206,12 @@ public class EntryFrame extends JFrame {
       }
     }
 
+    /**
+     * Parses the {@code milesDrivenField} text field and enters its value into {@code expenses}.
+     * @param expenses The Expenses object to enter the parsed, validated miles driven into.
+     * @return A boolean indicating whether or not validation was successful. False on a failed
+     *     parsing or validation.
+     */
     private boolean handleMilesDriven(final Expenses expenses) {
       try {
         expenses.setMilesDriven(this.parseField(EntryFrame.this.milesDrivenField, "miles driven"));
@@ -164,6 +222,12 @@ public class EntryFrame extends JFrame {
       }
     }
 
+    /**
+     * Parses the {@code parkingFeesField} text field and enters its value into {@code expenses}.
+     * @param expenses The Expenses object to enter the parsed, validated parking fees into.
+     * @return A boolean indicating whether or not validation was successful. False on a failed
+     *     parsing or validation.
+     */
     private boolean handleParkingFees(final Expenses expenses) {
       try {
         expenses.setParkingFees(this.parseField(EntryFrame.this.parkingFeesField, "parking fees"));
@@ -174,6 +238,12 @@ public class EntryFrame extends JFrame {
       }
     }
 
+    /**
+     * Parses the {@code taxiFeesField} text field and enters its value into {@code expenses}.
+     * @param expenses The Expenses object to enter the parsed, validated taxi fees into.
+     * @return A boolean indicating whether or not validation was successful. False on a failed
+     *     parsing or validation.
+     */
     private boolean handleTaxiFees(final Expenses expenses) {
       try {
         expenses.setTaxiFees(this.parseField(EntryFrame.this.taxiFeesField, "taxi fees"));
@@ -184,6 +254,12 @@ public class EntryFrame extends JFrame {
       }
     }
 
+    /**
+     * Parses the {@code conferenceFeesField} text field and enters its value into {@code expenses}.
+     * @param expenses The Expenses object to enter the parsed, validated conference fees into.
+     * @return A boolean indicating whether or not validation was successful. False on a failed
+     *     parsing or validation.
+     */
     private boolean handleConferenceFees(final Expenses expenses) {
       try {
         expenses.setConferenceFees(
@@ -195,6 +271,12 @@ public class EntryFrame extends JFrame {
       }
     }
 
+    /**
+     * Parses the {@code lodgingFeesField} text field and enters its value into {@code expenses}.
+     * @param expenses The Expenses object to enter the parsed, validated lodging fees into.
+     * @return A boolean indicating whether or not validation was successful. False on a failed
+     *     parsing or validation.
+     */
     private boolean handleLodgingFees(final Expenses expenses) {
       try {
         expenses.setLodgingCost(this.parseField(EntryFrame.this.lodgingFeesField, "lodging fees"));
@@ -210,9 +292,11 @@ public class EntryFrame extends JFrame {
      *
      * @param field The field to parse.
      * @param fieldName The name of the field for error messages.
+     *
      * @return The parsed, validated value.
-     * @throws IllegalArgumentException If the JTextField does not contain a valid dollar amount,
-     * this exception is thrown with a user-friendly message.
+     *
+     * @throws IllegalArgumentException If the JTextField does not contain a valid dollar
+     *     amount, this exception is thrown with a user-friendly message.
      */
     private double parseField(final JTextField field, final String fieldName)
         throws IllegalArgumentException {

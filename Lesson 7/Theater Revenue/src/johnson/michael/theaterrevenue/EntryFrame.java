@@ -11,7 +11,6 @@ import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 
 public class EntryFrame extends JFrame {
-
   private JTextField adultTicketPriceField = new JTextField(5);
   private JTextField childTicketPriceField = new JTextField(5);
   private JTextField numAdultTicketsField = new JTextField(5);
@@ -48,14 +47,13 @@ public class EntryFrame extends JFrame {
   }
 
   private class SubmitListener implements ActionListener {
-
     @Override
     public void actionPerformed(ActionEvent event) {
       double adultPrice, childPrice;
 
       try {
-        adultPrice = this
-            .parseDollarField(EntryFrame.this.adultTicketPriceField, "adult ticket price");
+        adultPrice =
+            this.parseDollarField(EntryFrame.this.adultTicketPriceField, "adult ticket price");
 
         if (adultPrice == 0.00d) {
           JOptionPane.showMessageDialog(EntryFrame.this, "Your adult tickets cannot be free.");
@@ -67,8 +65,8 @@ public class EntryFrame extends JFrame {
       }
 
       try {
-        childPrice = this
-            .parseDollarField(EntryFrame.this.adultTicketPriceField, "child ticket price");
+        childPrice =
+            this.parseDollarField(EntryFrame.this.childTicketPriceField, "child ticket price");
 
         if (childPrice == 0.00d) {
           JOptionPane.showMessageDialog(EntryFrame.this, "Your child tickets cannot be free.");
@@ -82,16 +80,16 @@ public class EntryFrame extends JFrame {
       int adultTicketsSold, childTicketsSold;
 
       try {
-        adultTicketsSold = this
-            .parseIntegerField(EntryFrame.this.numAdultTicketsField, "adult tickets sold");
+        adultTicketsSold =
+            this.parseIntegerField(EntryFrame.this.numAdultTicketsField, "adult tickets sold");
       } catch (IllegalArgumentException e) {
         JOptionPane.showMessageDialog(EntryFrame.this, e.getMessage());
         return;
       }
 
       try {
-        childTicketsSold = this
-            .parseIntegerField(EntryFrame.this.numChildTicketsField, "child tickets sold");
+        childTicketsSold =
+            this.parseIntegerField(EntryFrame.this.numChildTicketsField, "child tickets sold");
       } catch (IllegalArgumentException e) {
         JOptionPane.showMessageDialog(EntryFrame.this, e.getMessage());
         return;
@@ -105,8 +103,8 @@ public class EntryFrame extends JFrame {
 
       setVisible(false);
 
-      final ResultsFrame resultsFrame = new ResultsFrame(adultPrice, adultTicketsSold, childPrice,
-          childTicketsSold);
+      final ResultsFrame resultsFrame =
+          new ResultsFrame(adultPrice, adultTicketsSold, childPrice, childTicketsSold);
       resultsFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
       resultsFrame.setVisible(true);
     }
