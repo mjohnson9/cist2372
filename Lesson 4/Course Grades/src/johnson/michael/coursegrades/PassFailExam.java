@@ -1,7 +1,6 @@
 package johnson.michael.coursegrades;
 
 public class PassFailExam extends GradedActivity {
-
   /**
    * Creates a PassFailExam with the specified score
    *

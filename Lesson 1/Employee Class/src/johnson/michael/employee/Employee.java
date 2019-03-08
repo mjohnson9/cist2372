@@ -1,14 +1,13 @@
 package johnson.michael.employee;
 
 public class Employee {
-
   private String name;
   private int idNumber;
   private String department;
   private String position;
 
-  Employee(final String name, final int employeeId, final String department,
-      final String position) {
+  Employee(
+      final String name, final int employeeId, final String department, final String position) {
     this.setName(name);
     this.setIdNumber(employeeId);
     this.setDepartment(department);

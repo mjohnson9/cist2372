@@ -1,7 +1,6 @@
 package johnson.michael.bankaccount.exceptions;
 
 public class InvalidTestScore extends IllegalArgumentException {
-
   /**
    * The index of the invalid test score
    */

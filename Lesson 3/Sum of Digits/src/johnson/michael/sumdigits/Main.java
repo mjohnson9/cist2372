@@ -3,7 +3,6 @@ package johnson.michael.sumdigits;
 import javax.swing.JOptionPane;
 
 public class Main {
-
   public static void main(String[] args) {
     while (true) { // Loop until the user presses cancel on the prompt dialog
       final String digits = promptDigits();

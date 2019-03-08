@@ -1,7 +1,6 @@
 package johnson.michael.bankaccount;
 
 public class SavingsAccount extends BankAccount {
-
   public SavingsAccount(final double initialBalance, final double annualInterestRate) {
     this.setBalance(initialBalance);
     this.setAnnualInterestRate(annualInterestRate);

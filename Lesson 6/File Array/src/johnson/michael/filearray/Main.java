@@ -11,7 +11,6 @@ import java.io.IOException;
 import java.util.Random;
 
 public class Main {
-
   public static void main(String[] args) {
     final File workingFile = getWorkingFile();
     if (workingFile == null) {
@@ -77,8 +76,8 @@ public class Main {
    * otherwise.
    */
   public static boolean writeArray(final String fileName, int[] intArray) {
-    try (final DataOutputStream dataOutputStream = new DataOutputStream(
-        new FileOutputStream(fileName))) {
+    try (final DataOutputStream dataOutputStream =
+             new DataOutputStream(new FileOutputStream(fileName))) {
       // Write the array length so that we have it when reading back the array
       dataOutputStream.writeInt(intArray.length);
 
@@ -101,8 +100,8 @@ public class Main {
    * operation is a failure.
    */
   public static int[] readArray(final String fileName) {
-    try (final DataInputStream dataInputStream = new DataInputStream(
-        new FileInputStream(fileName))) {
+    try (final DataInputStream dataInputStream =
+             new DataInputStream(new FileInputStream(fileName))) {
       final int arrayLen = dataInputStream.readInt();
       int[] intArray = new int[arrayLen];
 

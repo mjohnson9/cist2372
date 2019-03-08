@@ -1,7 +1,6 @@
 package johnson.michael.carpetcalculator;
 
 public class RoomCarpet {
-
   /**
    * The dimensions of the room
    */
@@ -21,8 +20,7 @@ public class RoomCarpet {
     this.setCost(cost);
   }
 
-  private RoomCarpet() {
-  } // Hide the no-arg constructor
+  private RoomCarpet() {} // Hide the no-arg constructor
 
   /**
    * @return The dimensions of the room

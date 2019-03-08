@@ -11,7 +11,6 @@ import johnson.michael.retailitem.exceptions.NegativeUnitsOnHandException;
  * This class represents an item in a retail store.
  */
 public class RetailItem {
-
   /**
    * A description of the item.
    */
@@ -26,8 +25,7 @@ public class RetailItem {
   private double price;
 
   // Don't allow no-arg constructor
-  private RetailItem() {
-  }
+  private RetailItem() {}
 
   /**
    * Constructs a {@code RetailItem} from the given parameters.

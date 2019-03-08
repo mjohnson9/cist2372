@@ -4,10 +4,8 @@ import javax.swing.JOptionPane;
 import johnson.michael.bankaccount.exceptions.InvalidTestScore;
 
 public final class Main {
-
   // Don't allow instances of Main to be created
-  private Main() {
-  }
+  private Main() {}
 
   public static void main(final String[] args) {
     final double[] scoresArray = UI.promptTestScores();

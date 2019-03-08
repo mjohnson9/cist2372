@@ -1,7 +1,6 @@
 package johnson.michael.temperature;
 
 public class Temperature {
-
   private double ftemp;
 
   Temperature(final double fahrenheitTemperature) {

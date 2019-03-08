@@ -6,7 +6,6 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 
 public class ResultsFrame extends JFrame {
-
   private static final double PERCENT_KEPT = 0.2d;
 
   private final double adultTicketPrice;

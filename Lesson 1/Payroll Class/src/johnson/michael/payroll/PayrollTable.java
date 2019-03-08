@@ -5,7 +5,6 @@ import javax.swing.JScrollPane;
 import javax.swing.JTable;
 
 public class PayrollTable {
-
   private Payroll payroll;
   private JFrame frame;
   private JScrollPane pane;
@@ -64,6 +63,6 @@ public class PayrollTable {
    * @return Column names suitable for use in a JTable constructor
    */
   private Object[] getColumnNames() {
-    return new Object[]{"Employee ID", "Pay Rate", "Hours Worked", "Gross Wages"};
+    return new Object[] {"Employee ID", "Pay Rate", "Hours Worked", "Gross Wages"};
   }
 }

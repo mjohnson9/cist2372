@@ -3,9 +3,7 @@ package johnson.michael.carpetcalculator;
 import javax.swing.JOptionPane;
 
 public class UI {
-
-  private UI() {
-  } // Don't allow instances of this class to be created
+  private UI() {} // Don't allow instances of this class to be created
 
   public static void displayRoomDetails(final RoomCarpet room) {
     final RoomDimension dimensions = room.getDimensions();
@@ -18,9 +16,9 @@ public class UI {
   public static RoomCarpet promptCarpet() {
     final RoomDimension dimensions = promptRoom("room to be carpeted");
 
-    final double cost = promptDouble(
-        "Please enter the cost per square foot of the carpet for the room.", Double.MIN_VALUE,
-        Double.POSITIVE_INFINITY);
+    final double cost =
+        promptDouble("Please enter the cost per square foot of the carpet for the room.",
+            Double.MIN_VALUE, Double.POSITIVE_INFINITY);
 
     return new RoomCarpet(dimensions, cost);
   }
@@ -36,10 +34,10 @@ public class UI {
       promptEnd = ".";
     }
 
-    final double length = promptDouble(promptBegin + "width" + promptEnd, Double.MIN_VALUE,
-        Double.POSITIVE_INFINITY);
-    final double width = promptDouble(promptBegin + "length" + promptEnd, Double.MIN_VALUE,
-        Double.POSITIVE_INFINITY);
+    final double length =
+        promptDouble(promptBegin + "width" + promptEnd, Double.MIN_VALUE, Double.POSITIVE_INFINITY);
+    final double width = promptDouble(
+        promptBegin + "length" + promptEnd, Double.MIN_VALUE, Double.POSITIVE_INFINITY);
 
     return new RoomDimension(length, width);
   }

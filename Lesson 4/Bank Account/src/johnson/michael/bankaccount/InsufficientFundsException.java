@@ -1,5 +1,3 @@
 package johnson.michael.bankaccount;
 
-public class InsufficientFundsException extends Exception {
-
-}
+public class InsufficientFundsException extends Exception {}

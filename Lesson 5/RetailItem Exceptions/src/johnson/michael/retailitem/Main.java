@@ -9,13 +9,11 @@ import johnson.michael.retailitem.exceptions.NegativePriceException;
 import johnson.michael.retailitem.exceptions.NegativeUnitsOnHandException;
 
 public final class Main {
-
-  private static final String[] DESCRIPTIONS = {"Eggs", "Bacon", "Bread", "Butter", "Sugar",
-      "Ramen"};
+  private static final String[] DESCRIPTIONS = {
+      "Eggs", "Bacon", "Bread", "Butter", "Sugar", "Ramen"};
 
   // Don't allow Main to be instantiated
-  private Main() {
-  }
+  private Main() {}
 
   public static void main(final String[] args) {
     final Random r = new Random();

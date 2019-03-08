@@ -1,7 +1,6 @@
 package johnson.michael.bankaccount;
 
 public abstract class BankAccount {
-
   private double balance = 0d;
   private int numDeposits = 0;
   private int numWithdrawals = 0;

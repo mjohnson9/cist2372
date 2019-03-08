@@ -3,7 +3,6 @@ package johnson.michael.population;
 import javax.swing.JOptionPane;
 
 public class Main {
-
   public static void main(String[] args) {
     final int numOrganisms = promptNumberOfOrganisms();
     final double dailyIncrease = promptDailyIncrease();
@@ -21,10 +20,11 @@ public class Main {
    * @param dailyIncrease The daily percentage increase in organisms
    * @return A report for each day of organism growth
    */
-  public static String preparePopulationReport(final int numOrganisms, final int numDays,
-      final double dailyIncrease) {
+  public static String preparePopulationReport(
+      final int numOrganisms, final int numDays, final double dailyIncrease) {
     StringBuilder report = new StringBuilder();
-    double population = numOrganisms; // We use a double to allow slow growth that takes multiple days
+    double population =
+        numOrganisms; // We use a double to allow slow growth that takes multiple days
     for (int i = 0; i < numDays; i++) {
       if (i > 0) {
         report.append('\n');
@@ -42,8 +42,8 @@ public class Main {
    * @return A number of organisms within business rules
    */
   public static int promptNumberOfOrganisms() {
-    return promptInt("How many organisms are you starting with?", "number of organisms", 2,
-        Integer.MAX_VALUE);
+    return promptInt(
+        "How many organisms are you starting with?", "number of organisms", 2, Integer.MAX_VALUE);
   }
 
   /**
@@ -52,8 +52,8 @@ public class Main {
    * @return A number of days within business rules
    */
   public static int promptNumberOfDays() {
-    return promptInt("How many days will the organisms multiply?", "number of days", 1,
-        Integer.MAX_VALUE);
+    return promptInt(
+        "How many days will the organisms multiply?", "number of days", 1, Integer.MAX_VALUE);
   }
 
   /**
@@ -63,8 +63,8 @@ public class Main {
    */
   public static double promptDailyIncrease() {
     while (true) { // Continue to loop until we have a reason to exit the loop
-      final String answer = JOptionPane
-          .showInputDialog("What is the daily percentage increase of the organisms?");
+      final String answer =
+          JOptionPane.showInputDialog("What is the daily percentage increase of the organisms?");
       if (answer == null) { // The user cancelled the dialog
         System.exit(0); // Exit the program
       }
@@ -76,15 +76,15 @@ public class Main {
         // Attempt to parse the given input as an integer
         final double answerParsed = Double.parseDouble(answer);
         if (!(answerParsed > 0)) {
-          JOptionPane
-              .showMessageDialog(null, "The daily percentage increase must be greater than 0.");
+          JOptionPane.showMessageDialog(
+              null, "The daily percentage increase must be greater than 0.");
           continue; // Repeat the loop
         }
         return answerParsed / 100d; // Divide by 100 to convert to a usable percentage
       } catch (NumberFormatException e) {
         // The given input was not an integer
-        JOptionPane
-            .showMessageDialog(null, "The given percentage increase was not a valid number.");
+        JOptionPane.showMessageDialog(
+            null, "The given percentage increase was not a valid number.");
         continue; // Repeat the loop
       }
     }
@@ -113,12 +113,12 @@ public class Main {
         // Attempt to parse the given input as an integer
         final int answerParsed = Integer.parseInt(answer);
         if (answerParsed < minimum) {
-          JOptionPane.showMessageDialog(null,
-              String.format("The %s cannot be less than %d.", name, minimum));
+          JOptionPane.showMessageDialog(
+              null, String.format("The %s cannot be less than %d.", name, minimum));
           continue; // Repeat the loop
         } else if (answerParsed > maximum) {
-          JOptionPane.showMessageDialog(null,
-              String.format("The %s cannot be more than %d.", name, maximum));
+          JOptionPane.showMessageDialog(
+              null, String.format("The %s cannot be more than %d.", name, maximum));
         }
         return answerParsed;
       } catch (NumberFormatException e) {

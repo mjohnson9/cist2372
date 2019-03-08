@@ -7,7 +7,6 @@ import johnson.michael.bankaccount.exceptions.InvalidTestScore;
  * scores and provides utility functions for those scores.
  */
 public class TestScores {
-
   /**
    * The minimum score (inclusive) that can be in the scores array
    */
@@ -21,7 +20,6 @@ public class TestScores {
    * The list of test scores. All scores are between 0 and 100 (inclusive).
    */
   private final double[] scores;
-
 
   /**
    * Constructs a new TestScores with the given scores as its values

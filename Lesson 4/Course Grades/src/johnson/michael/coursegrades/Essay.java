@@ -1,7 +1,6 @@
 package johnson.michael.coursegrades;
 
 public class Essay extends GradedActivity {
-
   /**
    * Creates an Essay with the specified score
    *

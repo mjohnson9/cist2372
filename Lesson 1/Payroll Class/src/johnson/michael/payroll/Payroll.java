@@ -1,10 +1,9 @@
 package johnson.michael.payroll;
 
 public class Payroll {
-
   public final int length = 7;
-  private int[] employeeId = new int[]{5658845, 4520125, 7895122, 8777541, 8451277, 1302850,
-      7580489};
+  private int[] employeeId =
+      new int[] {5658845, 4520125, 7895122, 8777541, 8451277, 1302850, 7580489};
   private int[] hours = new int[length];
   private double[] payRate = new double[length];
   private double[] wages = new double[length];

@@ -3,7 +3,6 @@ package johnson.michael.coursegrades;
 import javax.swing.JOptionPane;
 
 public class UI {
-
   private UI() { // Don't allow instances of this class to be created
   }
 

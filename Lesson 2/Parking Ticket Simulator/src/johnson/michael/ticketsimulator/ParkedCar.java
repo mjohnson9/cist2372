@@ -9,22 +9,18 @@ import java.util.concurrent.ThreadLocalRandom;
  * ParkedCar represents a car parked at a parking meter.
  */
 public class ParkedCar {
-
   /**
    * List of makes and models to use in randomly generating a ParkedCar
    */
-  private static final Map<String, List<String>> MODELS = Collections.unmodifiableMap(Map.of(
-      "Ford",
-      List.of("F-150", "F-250", "Fusion", "Focus", "Taurus"),
-      "Chevrolet",
-      List.of("Impala", "Corvette", "Camaro", "Volt"),
-      "Tesla",
-      List.of("Model S", "Model X", "Model 3", "Roadster")));
+  private static final Map<String, List<String>> MODELS = Collections.unmodifiableMap(
+      Map.of("Ford", List.of("F-150", "F-250", "Fusion", "Focus", "Taurus"), "Chevrolet",
+          List.of("Impala", "Corvette", "Camaro", "Volt"), "Tesla",
+          List.of("Model S", "Model X", "Model 3", "Roadster")));
   /**
    * List of colors to use in randomly generating a car
    */
-  private static final List<String> COLORS = List
-      .of("Gray", "Blue", "Red", "Purple", "White", "Black");
+  private static final List<String> COLORS =
+      List.of("Gray", "Blue", "Red", "Purple", "White", "Black");
   /**
    * The make of the car
    */
@@ -52,8 +48,8 @@ public class ParkedCar {
    * @param color The new car's color
    * @param licensePlate The new car's license plate number
    */
-  public ParkedCar(final String make, final String model, final String color,
-      final String licensePlate) {
+  public ParkedCar(
+      final String make, final String model, final String color, final String licensePlate) {
     this.make = make;
     this.model = model;
     this.color = color;
@@ -63,8 +59,7 @@ public class ParkedCar {
   /**
    * ParkedCar does not offer a no-arg constructor
    */
-  private ParkedCar() {
-  }
+  private ParkedCar() {}
 
   public static ParkedCar generateRandom() {
     final ThreadLocalRandom random = ThreadLocalRandom.current();

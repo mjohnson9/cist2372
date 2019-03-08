@@ -6,17 +6,15 @@ import java.io.PrintWriter;
 import java.util.Scanner;
 
 public class Main {
-
   public static void main(String[] args) {
     // Create a Scanner on System.in for keyboard input
     final Scanner keyboard = new Scanner(System.in);
 
     // Retrieve a source file. Require that it exists.
-    File source = promptForFile(keyboard, "Enter a filename to be turned into uppercase: ",
-        true);
+    File source = promptForFile(keyboard, "Enter a filename to be turned into uppercase: ", true);
     // Retrieve a destination file. It doesn't matter if it exists.
-    File destination = promptForFile(keyboard,
-        "Enter a filename to store the uppercase results: ", false);
+    File destination =
+        promptForFile(keyboard, "Enter a filename to store the uppercase results: ", false);
 
     while (true) { // Loop until success
       final ConvertResult convertResult = convertFile(source, destination);
@@ -26,12 +24,11 @@ public class Main {
         break; // Exit the loop to end the program
       } else if (convertResult == ConvertResult.FAILED_DESTINATION_NOT_FOUND) {
         // Ask for a new destination file
-        destination = promptForFile(keyboard,
-            "Enter a filename to store the uppercase results: ", false);
+        destination =
+            promptForFile(keyboard, "Enter a filename to store the uppercase results: ", false);
       } else if (convertResult == ConvertResult.FAILED_SOURCE_NOT_FOUND) {
         // Ask for a new source file
-        source = promptForFile(keyboard, "Enter a filename to be turned into uppercase: ",
-            true);
+        source = promptForFile(keyboard, "Enter a filename to be turned into uppercase: ", true);
       }
     }
   }
@@ -45,8 +42,8 @@ public class Main {
    * will not return a File that doesn't exist. If this is false, the function does no checking.
    * @return A validated File.
    */
-  public static File promptForFile(final Scanner keyboard, final String prompt,
-      final boolean requireExisting) {
+  public static File promptForFile(
+      final Scanner keyboard, final String prompt, final boolean requireExisting) {
     boolean valid = false;
     File chosenFile = null;
 
@@ -56,8 +53,8 @@ public class Main {
       chosenFile = new File(fileName);
 
       if (requireExisting && !chosenFile.exists()) {
-        System.out
-            .println(fileName + " does not exist. Please enter the name of a file that exists.");
+        System.out.println(
+            fileName + " does not exist. Please enter the name of a file that exists.");
         System.out.println();
         valid = false;
         continue;
@@ -99,9 +96,5 @@ public class Main {
     return ConvertResult.SUCCESS;
   }
 
-  enum ConvertResult {
-    SUCCESS,
-    FAILED_DESTINATION_NOT_FOUND,
-    FAILED_SOURCE_NOT_FOUND
-  }
+  enum ConvertResult { SUCCESS, FAILED_DESTINATION_NOT_FOUND, FAILED_SOURCE_NOT_FOUND }
 }

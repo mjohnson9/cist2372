@@ -7,19 +7,16 @@ import java.util.concurrent.ThreadLocalRandom;
  * PoliceOfficer represents a traffic enforcement officer. It is immutable.
  */
 public class PoliceOfficer {
-
   /**
    * First names for generating random officers
    */
-  private static final List<String> FIRST_NAMES = List
-      .of("Jaclyn", "Carmen", "Sarah", "Carl", "Joshua", "Angie", "Paul", "Richard", "Horace",
-          "Pauline");
+  private static final List<String> FIRST_NAMES = List.of("Jaclyn", "Carmen", "Sarah", "Carl",
+      "Joshua", "Angie", "Paul", "Richard", "Horace", "Pauline");
   /**
    * Last names for generating random officers
    */
-  private static final List<String> LAST_NAMES = List
-      .of("Scott", "Simmons", "Adams", "Maher", "Roque", "Hodapp", "Lucius", "Barks", "Cooper",
-          "Libbey");
+  private static final List<String> LAST_NAMES = List.of("Scott", "Simmons", "Adams", "Maher",
+      "Roque", "Hodapp", "Lucius", "Barks", "Cooper", "Libbey");
   /**
    * The minimum badge number for a random officer
    */
@@ -52,8 +49,7 @@ public class PoliceOfficer {
     this.lastName = lastName;
   }
 
-  private PoliceOfficer() {
-  } // Hide the no-arg constructor
+  private PoliceOfficer() {} // Hide the no-arg constructor
 
   /**
    * Generates a random PoliceOfficer
@@ -92,9 +88,9 @@ public class PoliceOfficer {
     }
 
     if (car.getMinutesParked() <= (meter.getTimePurchased() + 1)) {
-      System.out.println(String
-          .format("\tThe %s %s %s has %,.0f minutes remaining on their meter.", car.getColor(),
-              car.getMake(), car.getModel(), meter.getTimePurchased() - car.getMinutesParked()));
+      System.out.println(String.format("\tThe %s %s %s has %,.0f minutes remaining on their meter.",
+          car.getColor(), car.getMake(), car.getModel(),
+          meter.getTimePurchased() - car.getMinutesParked()));
       return null;
     }
 

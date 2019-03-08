@@ -5,7 +5,6 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Main {
-
   private static final Scanner scanner = new Scanner(System.in);
 
   public static void main(String[] main) throws InterruptedException {
@@ -17,8 +16,8 @@ public class Main {
     System.out.println("========= SAVINGS ACCOUNT ==========");
     System.out.println(String.format("Balance: $%,.2f", account.getBalance()));
     System.out.println("Active: " + (account.isActive() ? "Yes" : "No"));
-    System.out.println(String
-        .format("Pending monthly service charges: $%,.2f", account.getMonthlyServiceCharges()));
+    System.out.println(String.format(
+        "Pending monthly service charges: $%,.2f", account.getMonthlyServiceCharges()));
     System.out.println("====================================");
   }
 
@@ -37,8 +36,8 @@ public class Main {
       System.out.println("Q: Quit");
 
       final char input = Character.toLowerCase(promptChar("Please select an option: ", value -> {
-        final char lowerValue = Character
-            .toLowerCase(value); // lowercase the value for easier comparison
+        final char lowerValue =
+            Character.toLowerCase(value); // lowercase the value for easier comparison
 
         switch (lowerValue) {
           case 'd':
@@ -136,8 +135,8 @@ public class Main {
     clearScreen();
     System.out.println("========= SAVINGS ACCOUNT CREATION ==========");
 
-    final double initialBalance = promptDouble(
-        "Please enter the initial balance of the savings account: $", value -> {
+    final double initialBalance =
+        promptDouble("Please enter the initial balance of the savings account: $", value -> {
           if (value < 0) {
             System.out.println("The initial balance may not be less than zero.");
             return false;
@@ -145,8 +144,8 @@ public class Main {
 
           return true;
         });
-    final double annualInterestRate = promptDouble(
-        "Please enter the annual interest rate: ", value -> {
+    final double annualInterestRate =
+        promptDouble("Please enter the annual interest rate: ", value -> {
           if (value < 0) {
             System.out.println("The annual interest rate may not be less than zero.");
             return false;

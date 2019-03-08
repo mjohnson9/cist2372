@@ -5,7 +5,6 @@ import java.util.Collections;
 import java.util.List;
 
 public class Street {
-
   private final String name;
   private final List<ParkingMeter> parkingMeters = new ArrayList<>();
   private PoliceOfficer assignedOfficer;

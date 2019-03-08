@@ -1,7 +1,6 @@
 package johnson.michael.ticketsimulator;
 
 public class ParkingTicket {
-
   private ParkedCar car;
   private ParkingMeter meter;
   private PoliceOfficer officer;
@@ -15,8 +14,7 @@ public class ParkingTicket {
   /**
    * ParkingTicket does not have a no-arg constructor
    */
-  private ParkingTicket() {
-  }
+  private ParkingTicket() {}
 
   public ParkedCar getCar() {
     return this.car;

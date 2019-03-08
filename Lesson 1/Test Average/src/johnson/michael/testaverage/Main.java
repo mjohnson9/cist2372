@@ -3,7 +3,6 @@ package johnson.michael.testaverage;
 import javax.swing.JOptionPane;
 
 public class Main {
-
   public static void main(String[] args) {
     final double[] testScores = promptTestScores(5);
     final String report = prepareReport(testScores);
@@ -87,8 +86,8 @@ public class Main {
     for (int i = 0; i < testScores.length; i++) {
       final String numberName = numberToOrderName(i + 1);
       while (true) { // Continue to loop until we have a reason to exit the loop
-        final String answer = JOptionPane
-            .showInputDialog(String.format("What was the %s test score?", numberName));
+        final String answer =
+            JOptionPane.showInputDialog(String.format("What was the %s test score?", numberName));
         if (answer == null) { // The user cancelled the dialog
           System.exit(0); // Exit the program
         }

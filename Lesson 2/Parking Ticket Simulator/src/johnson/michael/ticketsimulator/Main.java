@@ -3,7 +3,6 @@ package johnson.michael.ticketsimulator;
 import java.util.concurrent.ThreadLocalRandom;
 
 final class Main {
-
   private static final double MINIMUM_MINUTES_PARKED = 3d;
   private static final double MAXIMUM_MINUTES_PARKED = 6d * 60d;
 
@@ -13,8 +12,7 @@ final class Main {
   /**
    * Main should never be instantiated
    */
-  private Main() {
-  }
+  private Main() {}
 
   public static void main(final String[] args) {
     final ThreadLocalRandom random = ThreadLocalRandom.current();

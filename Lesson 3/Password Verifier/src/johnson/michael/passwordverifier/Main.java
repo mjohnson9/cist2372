@@ -5,7 +5,6 @@ import java.util.List;
 import javax.swing.JOptionPane;
 
 public class Main {
-
   public static void main(String[] args) {
     while (true) { // Loop until the user pushes the cancel button in the password prompt
       final String password = promptPassword();
@@ -17,8 +16,8 @@ public class Main {
         continue;
       }
 
-      JOptionPane.showMessageDialog(null,
-          "Your password contains the following errors:\n" + String.join("\n", errors));
+      JOptionPane.showMessageDialog(
+          null, "Your password contains the following errors:\n" + String.join("\n", errors));
     }
   }
 

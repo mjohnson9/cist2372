@@ -1,7 +1,6 @@
 package johnson.michael.ticketsimulator;
 
 public class ParkingMeter {
-
   /**
    * The time purchased in minutes
    */

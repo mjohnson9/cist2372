@@ -5,7 +5,6 @@
 package johnson.michael.retailitem.exceptions;
 
 public class NegativeUnitsOnHandException extends IllegalArgumentException {
-
   /**
    * Constructs a {@code NegativeUnitsOnHandException} with a default message of "The units on hand
    * cannot be negative"

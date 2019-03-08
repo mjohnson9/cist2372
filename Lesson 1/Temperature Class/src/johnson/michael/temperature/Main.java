@@ -3,11 +3,10 @@ package johnson.michael.temperature;
 import javax.swing.JOptionPane;
 
 public class Main {
-
   public static void main(String[] args) {
     final Temperature temperature = promptTemperature();
-    JOptionPane.showMessageDialog(null, String
-        .format("The temperature you entered:\nFahrenheit: %.1f\nCelsius: %.1f\nKelvin: %.1f",
+    JOptionPane.showMessageDialog(null,
+        String.format("The temperature you entered:\nFahrenheit: %.1f\nCelsius: %.1f\nKelvin: %.1f",
             temperature.getFahrenheit(), temperature.getCelsius(), temperature.getKelvin()));
   }
 
@@ -18,9 +17,9 @@ public class Main {
    */
   public static Temperature promptTemperature() {
     while (true) { // Continue to loop until we have a reason to exit the loop
-      String answer = showPrompt(
-          "Enter a temperature followed by F (Fahrenheit), C (Celsius), or K (Kelvin).",
-          "temperature");
+      String answer =
+          showPrompt("Enter a temperature followed by F (Fahrenheit), C (Celsius), or K (Kelvin).",
+              "temperature");
       answer = answer.toLowerCase(); // lowercase for easier parsing
       final char endingLetter = answer.charAt(answer.length() - 1);
       answer = answer.substring(0, answer.length() - 1);

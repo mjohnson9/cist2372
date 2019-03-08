@@ -5,7 +5,6 @@
 package johnson.michael.retailitem.exceptions;
 
 public class NegativePriceException extends IllegalArgumentException {
-
   /**
    * Constructs a {@code NegativePriceException} with a default message of "The price cannot be
    * negative"

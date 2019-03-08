@@ -1,5 +1,3 @@
 package johnson.michael.bankaccount;
 
-public class AccountInactiveException extends Exception {
-
-}
+public class AccountInactiveException extends Exception {}

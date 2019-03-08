@@ -1,7 +1,6 @@
 package johnson.michael.coursegrades;
 
 public class GradedActivity {
-
   /**
    * The score for this activity
    */
@@ -10,8 +9,7 @@ public class GradedActivity {
   /**
    * Creates a GradedActivity with a score of 100.0.
    */
-  public GradedActivity() {
-  }
+  public GradedActivity() {}
 
   /**
    * Creates a GradedActivity with the specified score

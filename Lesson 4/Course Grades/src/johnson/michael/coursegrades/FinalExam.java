@@ -1,7 +1,6 @@
 package johnson.michael.coursegrades;
 
 public class FinalExam extends GradedActivity {
-
   /**
    * Creates a FinalExam with the specified score
    *

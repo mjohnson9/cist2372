@@ -3,12 +3,11 @@ package johnson.michael.bankcharges;
 import javax.swing.JOptionPane;
 
 public class Main {
-
   public static void main(String[] args) {
     final int numChecks = promptNumberOfChecks();
     final double fees = calculateServiceFees(numChecks);
-    JOptionPane.showMessageDialog(null,
-        String.format("Your service fees for %d checks is $%.2f.", numChecks, fees));
+    JOptionPane.showMessageDialog(
+        null, String.format("Your service fees for %d checks is $%.2f.", numChecks, fees));
   }
 
   /**
@@ -46,23 +45,20 @@ public class Main {
         System.exit(0); // Exit the program
       }
       if (input.trim().equals("")) {
-        JOptionPane.showMessageDialog(null,
-            "The number of checks written cannot be blank.");
+        JOptionPane.showMessageDialog(null, "The number of checks written cannot be blank.");
         continue; // Repeat the loop
       }
       try {
         // Attempt to parse the given input as an integer
         final int numChecks = Integer.parseInt(input);
         if (numChecks < 0) {
-          JOptionPane.showMessageDialog(null,
-              "The number of checks written cannot be negative.");
+          JOptionPane.showMessageDialog(null, "The number of checks written cannot be negative.");
           continue; // Repeat the loop
         }
         return numChecks;
       } catch (NumberFormatException e) {
         // The given input was not an integer
-        JOptionPane.showMessageDialog(null,
-            "The given number of checks was not a valid integer.");
+        JOptionPane.showMessageDialog(null, "The given number of checks was not a valid integer.");
         continue; // Repeat the loop
       }
     }

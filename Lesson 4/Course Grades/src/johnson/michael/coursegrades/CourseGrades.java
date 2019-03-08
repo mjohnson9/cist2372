@@ -1,7 +1,6 @@
 package johnson.michael.coursegrades;
 
 public class CourseGrades {
-
   /**
    * The array index at which the lab is stored
    */
@@ -27,8 +26,7 @@ public class CourseGrades {
   /**
    * Instantiates a new CourseGrades object with no grades stored
    */
-  public CourseGrades() {
-  }
+  public CourseGrades() {}
 
   public GradedActivity getLab() {
     return this.grades[CourseGrades.GRADE_LAB];

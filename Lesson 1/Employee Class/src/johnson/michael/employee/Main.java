@@ -1,13 +1,11 @@
 package johnson.michael.employee;
 
 public class Main {
-
   public static void main(String[] args) {
-    final Employee[] employees = new Employee[]{
-        new Employee("Susan Meyers", 47899, "Accounting", "Vice President"),
-        new Employee("Mark Jones", 39119, "IT", "Programmer"),
-        new Employee("Joy Rogers", 81774, "Manufacturing", "Engineer")
-    };
+    final Employee[] employees =
+        new Employee[] {new Employee("Susan Meyers", 47899, "Accounting", "Vice President"),
+            new Employee("Mark Jones", 39119, "IT", "Programmer"),
+            new Employee("Joy Rogers", 81774, "Manufacturing", "Engineer")};
 
     displayEmployees(employees);
   }

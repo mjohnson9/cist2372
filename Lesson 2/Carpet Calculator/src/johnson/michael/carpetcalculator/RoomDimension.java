@@ -4,7 +4,6 @@ package johnson.michael.carpetcalculator;
  * RoomDimension represents the dimensions of a room.
  */
 public class RoomDimension {
-
   /**
    * The length of the room in feet
    */
@@ -24,9 +23,7 @@ public class RoomDimension {
     this.setLength(length);
   }
 
-  private RoomDimension() {
-  } // Hide the no-arg constructor
-
+  private RoomDimension() {} // Hide the no-arg constructor
 
   /**
    * @return The length of the room in feet.

@@ -3,7 +3,6 @@ package johnson.michael.payroll;
 import javax.swing.JOptionPane;
 
 public class Main {
-
   public static void main(String[] args) {
     final Payroll payroll = new Payroll();
     promptPayroll(payroll);
@@ -28,12 +27,12 @@ public class Main {
   public static void promptPayroll(final Payroll payroll) {
     for (int i = 0; i < payroll.length; i++) {
       final int employeeId = payroll.getEmployeeId(i);
-      final double payRate = promptDouble(
-          String.format("What is the pay rate for employee %d?", employeeId), "pay rate", 6.0d,
-          Double.MAX_VALUE);
-      final int hoursWorked = promptInt(
-          String.format("How many hours has employee %d worked?", employeeId),
-          "number of hours worked", 0, Integer.MAX_VALUE);
+      final double payRate =
+          promptDouble(String.format("What is the pay rate for employee %d?", employeeId),
+              "pay rate", 6.0d, Double.MAX_VALUE);
+      final int hoursWorked =
+          promptInt(String.format("How many hours has employee %d worked?", employeeId),
+              "number of hours worked", 0, Integer.MAX_VALUE);
       payroll.setPayRate(i, payRate);
       payroll.setHours(i, hoursWorked);
     }
@@ -48,20 +47,20 @@ public class Main {
    * @param maximum The maximum integer allowed
    * @return The validated integer provided by the user
    */
-  public static int promptInt(final String prompt, final String name, final int minimum,
-      final int maximum) {
+  public static int promptInt(
+      final String prompt, final String name, final int minimum, final int maximum) {
     while (true) { // Continue to loop until we have a reason to exit the loop
       final String answer = showPrompt(prompt, name);
       try {
         // Attempt to parse the given input as an integer
         final int answerParsed = Integer.parseInt(answer);
         if (answerParsed < minimum) {
-          JOptionPane.showMessageDialog(null,
-              String.format("The %s cannot be less than %d.", name, minimum));
+          JOptionPane.showMessageDialog(
+              null, String.format("The %s cannot be less than %d.", name, minimum));
           continue; // Repeat the loop
         } else if (answerParsed > maximum) {
-          JOptionPane.showMessageDialog(null,
-              String.format("The %s cannot be more than %d.", name, maximum));
+          JOptionPane.showMessageDialog(
+              null, String.format("The %s cannot be more than %d.", name, maximum));
         }
         return answerParsed;
       } catch (NumberFormatException e) {
@@ -81,20 +80,20 @@ public class Main {
    * @param maximum The maximum double allowed
    * @return The validated double provided by the user
    */
-  public static double promptDouble(final String prompt, final String name, final double minimum,
-      final double maximum) {
+  public static double promptDouble(
+      final String prompt, final String name, final double minimum, final double maximum) {
     while (true) { // Continue to loop until we have a reason to exit the loop
       final String answer = showPrompt(prompt, name);
       try {
         // Attempt to parse the given input as an integer
         final double answerParsed = Double.parseDouble(answer);
         if (answerParsed < minimum) {
-          JOptionPane.showMessageDialog(null,
-              String.format("The %s cannot be less than %f.", name, minimum));
+          JOptionPane.showMessageDialog(
+              null, String.format("The %s cannot be less than %f.", name, minimum));
           continue; // Repeat the loop
         } else if (answerParsed > maximum) {
-          JOptionPane.showMessageDialog(null,
-              String.format("The %s cannot be more than %f.", name, maximum));
+          JOptionPane.showMessageDialog(
+              null, String.format("The %s cannot be more than %f.", name, maximum));
         }
         return answerParsed;
       } catch (NumberFormatException e) {

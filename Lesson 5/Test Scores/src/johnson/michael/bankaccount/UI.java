@@ -4,10 +4,8 @@ import java.util.ArrayList;
 import javax.swing.JOptionPane;
 
 public final class UI {
-
   // This is a utility class with only static methods; don't allow instances to be created
-  private UI() {
-  }
+  private UI() {}
 
   /**
    * Displays information about a {@link TestScores} object to the user
@@ -113,8 +111,9 @@ public final class UI {
       try {
         result = Double.parseDouble(response);
       } catch (final NumberFormatException e) {
-        JOptionPane.showMessageDialog(null, "\"" + response
-            + "\" is not a valid test score. Test scores must be a number, optionally with a decimal point.");
+        JOptionPane.showMessageDialog(null,
+            "\"" + response
+                + "\" is not a valid test score. Test scores must be a number, optionally with a decimal point.");
       }
     } while (result == null);
 
