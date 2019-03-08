@@ -60,7 +60,7 @@ public class ResultsFrame extends JFrame {
   }
 
   public double getAdultGrossRevenue() {
-    return this.adultTicketPrice * ((double) this.adultTicketsSold);
+    return this.adultTicketPrice * (double) this.adultTicketsSold;
   }
 
   public double getAdultNetRevenue() {
@@ -68,7 +68,7 @@ public class ResultsFrame extends JFrame {
   }
 
   public double getChildGrossRevenue() {
-    return this.childTicketPrice * ((double) this.childTicketsSold);
+    return this.childTicketPrice * (double) this.childTicketsSold;
   }
 
   public double getChildNetRevenue() {

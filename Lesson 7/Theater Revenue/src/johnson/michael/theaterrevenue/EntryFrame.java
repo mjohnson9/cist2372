@@ -48,50 +48,38 @@ public class EntryFrame extends JFrame {
 
   private class SubmitListener implements ActionListener {
     @Override
-    public void actionPerformed(ActionEvent event) {
-      double adultPrice, childPrice;
-
+    public void actionPerformed(ActionEvent e) {
+      double adultPrice;
       try {
-        adultPrice =
-            this.parseDollarField(EntryFrame.this.adultTicketPriceField, "adult ticket price");
-
-        if (adultPrice == 0.00d) {
-          JOptionPane.showMessageDialog(EntryFrame.this, "Your adult tickets cannot be free.");
-          return;
-        }
-      } catch (IllegalArgumentException e) {
-        JOptionPane.showMessageDialog(EntryFrame.this, e.getMessage());
+        adultPrice = this.parseAdultPrice();
+      } catch (IllegalArgumentException ex) {
+        JOptionPane.showMessageDialog(EntryFrame.this, ex.getMessage());
         return;
       }
 
+      double childPrice;
       try {
-        childPrice =
-            this.parseDollarField(EntryFrame.this.childTicketPriceField, "child ticket price");
-
-        if (childPrice == 0.00d) {
-          JOptionPane.showMessageDialog(EntryFrame.this, "Your child tickets cannot be free.");
-          return;
-        }
-      } catch (IllegalArgumentException e) {
-        JOptionPane.showMessageDialog(EntryFrame.this, e.getMessage());
+        childPrice = this.parseChildPrice();
+      } catch (IllegalArgumentException ex) {
+        JOptionPane.showMessageDialog(EntryFrame.this, ex.getMessage());
         return;
       }
 
-      int adultTicketsSold, childTicketsSold;
-
+      int adultTicketsSold;
       try {
         adultTicketsSold =
             this.parseIntegerField(EntryFrame.this.numAdultTicketsField, "adult tickets sold");
-      } catch (IllegalArgumentException e) {
-        JOptionPane.showMessageDialog(EntryFrame.this, e.getMessage());
+      } catch (IllegalArgumentException ex) {
+        JOptionPane.showMessageDialog(EntryFrame.this, ex.getMessage());
         return;
       }
 
+      int childTicketsSold;
       try {
         childTicketsSold =
             this.parseIntegerField(EntryFrame.this.numChildTicketsField, "child tickets sold");
-      } catch (IllegalArgumentException e) {
-        JOptionPane.showMessageDialog(EntryFrame.this, e.getMessage());
+      } catch (IllegalArgumentException ex) {
+        JOptionPane.showMessageDialog(EntryFrame.this, ex.getMessage());
         return;
       }
 
@@ -101,12 +89,46 @@ public class EntryFrame extends JFrame {
         return;
       }
 
-      setVisible(false);
+      EntryFrame.this.setVisible(false);
 
       final ResultsFrame resultsFrame =
           new ResultsFrame(adultPrice, adultTicketsSold, childPrice, childTicketsSold);
       resultsFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
       resultsFrame.setVisible(true);
+    }
+
+    /**
+     * Parses the {@code adultTicketPriceField} text field and validates it.
+     * @return A parsed, validated adult ticket price.
+     * @throws IllegalArgumentException When the text field contains an invalid value. The message
+     *     of the exception is a user-friendly message explaining why it's invalid.
+     */
+    private double parseAdultPrice() throws IllegalArgumentException {
+      double adultPrice =
+          this.parseDollarField(EntryFrame.this.adultTicketPriceField, "adult ticket price");
+
+      if (adultPrice == 0.00d) {
+        throw new IllegalArgumentException("Your adult tickets cannot be free.");
+      }
+
+      return adultPrice;
+    }
+
+    /**
+     * Parses the {@code childTicketPriceField} text field and validates it.
+     * @return A parsed, validated child ticket price.
+     * @throws IllegalArgumentException When the text field contains an invalid value. The message
+     *     of the exception is a user-friendly message explaining why it's invalid.
+     */
+    private double parseChildPrice() throws IllegalArgumentException {
+      double childPrice =
+          this.parseDollarField(EntryFrame.this.childTicketPriceField, "child ticket price");
+
+      if (childPrice == 0.00d) {
+        throw new IllegalArgumentException("Your child tickets cannot be free.");
+      }
+
+      return childPrice;
     }
 
     /**

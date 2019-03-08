@@ -2,16 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="67d4455f-d6bd-4420-b2aa-a3a993f2fdf6" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/saveactions_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/saveactions_settings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/johnson/michael/theaterrevenue/EntryFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/johnson/michael/theaterrevenue/EntryFrame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/johnson/michael/theaterrevenue/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/johnson/michael/theaterrevenue/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Travel Expenses/.idea/saveactions_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Travel Expenses/.idea/saveactions_settings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/johnson/michael/theaterrevenue/ResultsFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/johnson/michael/theaterrevenue/ResultsFrame.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Travel Expenses/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Travel Expenses/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Travel Expenses/src/johnson/michael/travelexpenses/EntryFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Travel Expenses/src/johnson/michael/travelexpenses/EntryFrame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Travel Expenses/src/johnson/michael/travelexpenses/Expenses.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Travel Expenses/src/johnson/michael/travelexpenses/Expenses.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Travel Expenses/src/johnson/michael/travelexpenses/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Travel Expenses/src/johnson/michael/travelexpenses/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Travel Expenses/src/johnson/michael/travelexpenses/ResultsFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Travel Expenses/src/johnson/michael/travelexpenses/ResultsFrame.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -21,12 +15,12 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/johnson/michael/theaterrevenue/EntryFrame.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="410">
-              <caret line="33" column="40" selection-start-line="33" selection-start-column="40" selection-end-line="33" selection-end-column="40" />
+            <state relative-caret-position="661">
+              <caret line="119" column="40" selection-start-line="119" selection-start-column="40" selection-end-line="119" selection-end-column="40" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -68,7 +62,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -91,7 +85,7 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -144,17 +138,18 @@
       <workItem from="1551639894904" duration="3147000" />
       <workItem from="1552078086646" duration="157000" />
       <workItem from="1552079311734" duration="73000" />
+      <workItem from="1552081598275" duration="685000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3377000" />
+    <option name="totallyTimeSpent" value="4062000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1920" height="1002" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2550586" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25772098" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -176,7 +171,7 @@
       <window_info anchor="bottom" id="Messages" order="12" weight="0.32967034" />
       <window_info anchor="bottom" id="Database Changes" order="13" />
       <window_info anchor="bottom" id="Version Control" order="14" />
-      <window_info anchor="bottom" id="Inspection Results" order="15" visible="true" weight="0.32967034" />
+      <window_info anchor="bottom" id="Inspection Results" order="15" weight="0.32967034" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -211,8 +206,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/johnson/michael/theaterrevenue/EntryFrame.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="410">
-          <caret line="33" column="40" selection-start-line="33" selection-start-column="40" selection-end-line="33" selection-end-column="40" />
+        <state relative-caret-position="661">
+          <caret line="119" column="40" selection-start-line="119" selection-start-column="40" selection-end-line="119" selection-end-column="40" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
