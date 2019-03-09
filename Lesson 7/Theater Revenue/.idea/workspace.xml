@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="67d4455f-d6bd-4420-b2aa-a3a993f2fdf6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/johnson/michael/theaterrevenue/EntryFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/johnson/michael/theaterrevenue/EntryFrame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/johnson/michael/theaterrevenue/ResultsFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/johnson/michael/theaterrevenue/ResultsFrame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Travel Expenses/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Travel Expenses/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="67d4455f-d6bd-4420-b2aa-a3a993f2fdf6" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -19,8 +14,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/johnson/michael/theaterrevenue/EntryFrame.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="661">
-              <caret line="119" column="40" selection-start-line="119" selection-start-column="40" selection-end-line="119" selection-end-column="40" />
+            <state relative-caret-position="360">
+              <caret line="24" column="43" lean-forward="true" selection-start-line="24" selection-start-column="43" selection-end-line="24" selection-end-column="43" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -138,18 +133,17 @@
       <workItem from="1551639894904" duration="3147000" />
       <workItem from="1552078086646" duration="157000" />
       <workItem from="1552079311734" duration="73000" />
-      <workItem from="1552081598275" duration="685000" />
+      <workItem from="1552081598275" duration="1285000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4062000" />
+    <option name="totallyTimeSpent" value="4662000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1920" height="1002" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25772098" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25772098" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -163,7 +157,7 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="FindBugs-IDEA" order="7" />
+      <window_info anchor="bottom" id="FindBugs-IDEA" order="7" visible="true" weight="0.32967034" />
       <window_info anchor="bottom" id="Terminal" order="8" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="CheckStyle" order="10" />
@@ -206,8 +200,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/johnson/michael/theaterrevenue/EntryFrame.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="661">
-          <caret line="119" column="40" selection-start-line="119" selection-start-column="40" selection-end-line="119" selection-end-column="40" />
+        <state relative-caret-position="360">
+          <caret line="24" column="43" lean-forward="true" selection-start-line="24" selection-start-column="43" selection-end-line="24" selection-end-column="43" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
