@@ -2,38 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="44a9b663-f58e-4193-8563-b9229f9d1b1c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../Payroll Class/.idea/checkstyle-idea.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Payroll Class/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Payroll Class/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Payroll Class/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Payroll Class/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Payroll Class/Payroll Class.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Payroll Class/src/johnson/michael/payroll/Payroll.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Payroll Class/src/johnson/michael/payroll/PayrollFrame.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Payroll Class/src/johnson/michael/payroll/exceptions/EmptyNameException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Payroll Class/src/johnson/michael/payroll/exceptions/InvalidEmployeeIdException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Payroll Class/src/johnson/michael/payroll/exceptions/InvalidHourlyPayRateException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Payroll Class/src/johnson/michael/payroll/exceptions/InvalidHoursWorkedException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/checkstyle-idea.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/findbugs-idea.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/saveactions_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PowerBall Analysis.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pbnumbers.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/johnson/michael/powerball/AnalysisFrame.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/johnson/michael/powerball/BallStatistics.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/johnson/michael/powerball/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/johnson/michael/powerball/PowerBallAnalysis.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/johnson/michael/powerball/PowerBallDrawing.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lesson 7/Theater Revenue/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Lesson 7/Theater Revenue/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/johnson/michael/powerball/AnalysisFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/johnson/michael/powerball/AnalysisFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/johnson/michael/powerball/BallStatistics.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/johnson/michael/powerball/BallStatistics.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/johnson/michael/powerball/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/johnson/michael/powerball/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/johnson/michael/powerball/PowerBallDrawing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/johnson/michael/powerball/PowerBallDrawing.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -45,10 +18,69 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/johnson/michael/powerball/PowerBallDrawing.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="290">
+              <caret line="90" column="26" selection-start-line="90" selection-start-column="26" selection-end-line="90" selection-end-column="26" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#2384#2402#0" expanded="true" />
+                <element signature="e#2875#2876#0" expanded="true" />
+                <element signature="e#2913#2914#0" expanded="true" />
+                <element signature="e#2944#2945#0" expanded="true" />
+                <element signature="e#2975#2976#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/johnson/michael/powerball/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="337">
+              <caret line="54" column="5" selection-start-line="54" selection-start-column="5" selection-end-line="54" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-11.0.2.jdk/Contents/Home/lib/src.zip!/java.base/java/util/Scanner.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="174">
+              <caret line="938" selection-start-line="938" selection-end-line="938" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/johnson/michael/powerball/AnalysisFrame.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="310">
+              <caret line="64" column="43" selection-start-line="64" selection-start-column="43" selection-end-line="64" selection-end-column="43" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/johnson/michael/powerball/BallStatistics.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="189">
+              <caret line="33" column="2" selection-start-line="33" selection-start-column="2" selection-end-line="33" selection-end-column="2" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/johnson/michael/powerball/PowerBallAnalysis.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="271">
-              <caret line="169" column="51" lean-forward="true" selection-start-line="169" selection-start-column="51" selection-end-line="169" selection-end-column="51" />
+            <state relative-caret-position="196">
+              <caret line="137" column="2" selection-start-line="137" selection-start-column="2" selection-end-line="137" selection-end-column="2" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -76,11 +108,11 @@
       <list>
         <option value="$PROJECT_DIR$/src/johnson/michael/powerball/PowerBallRoll.java" />
         <option value="$PROJECT_DIR$/src/johnson/michael/powerball/NumberStatistics.java" />
-        <option value="$PROJECT_DIR$/src/johnson/michael/powerball/PowerBallDrawing.java" />
-        <option value="$PROJECT_DIR$/src/johnson/michael/powerball/AnalysisFrame.java" />
-        <option value="$PROJECT_DIR$/src/johnson/michael/powerball/BallStatistics.java" />
-        <option value="$PROJECT_DIR$/src/johnson/michael/powerball/Main.java" />
         <option value="$PROJECT_DIR$/src/johnson/michael/powerball/PowerBallAnalysis.java" />
+        <option value="$PROJECT_DIR$/src/johnson/michael/powerball/BallStatistics.java" />
+        <option value="$PROJECT_DIR$/src/johnson/michael/powerball/AnalysisFrame.java" />
+        <option value="$PROJECT_DIR$/src/johnson/michael/powerball/Main.java" />
+        <option value="$PROJECT_DIR$/src/johnson/michael/powerball/PowerBallDrawing.java" />
       </list>
     </option>
   </component>
@@ -126,10 +158,11 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552160257568" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552161434010" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="restartRequiresConfirmation" value="false" />
+    <property name="run.code.analysis.last.selected.profile" value="aGoogle" />
     <property name="settings.editor.selected.configurable" value="preferences.editor" />
   </component>
   <component name="RunDashboard">
@@ -164,29 +197,30 @@
       <option name="presentableId" value="Default" />
       <updated>1552127027181</updated>
       <workItem from="1552127028484" duration="580000" />
-      <workItem from="1552127648548" duration="10015000" />
+      <workItem from="1552127648548" duration="11187000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10595000" />
+    <option name="totallyTimeSpent" value="11767000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1920" height="1007" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25239617" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25239617" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
       <window_info id="Capture Tool" order="4" />
       <window_info id="UI Designer" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Inspection Results" weight="0.32896176" />
       <window_info anchor="bottom" id="Messages" weight="0.32896176" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32896176" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.4" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -253,10 +287,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/johnson/michael/powerball/PowerBallDrawing.java">
+    <entry file="file://$PROJECT_DIR$/src/johnson/michael/powerball/BallStatistics.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
-          <caret line="47" column="43" lean-forward="true" selection-start-line="47" selection-start-column="43" selection-end-line="47" selection-end-column="43" />
+        <state relative-caret-position="189">
+          <caret line="33" column="2" selection-start-line="33" selection-start-column="2" selection-end-line="33" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/johnson/michael/powerball/PowerBallAnalysis.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="137" column="2" selection-start-line="137" selection-start-column="2" selection-end-line="137" selection-end-column="2" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -265,37 +306,60 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/johnson/michael/powerball/AnalysisFrame.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-535">
-          <caret line="19" column="69" selection-start-line="19" selection-start-column="69" selection-end-line="19" selection-end-column="69" />
+        <state relative-caret-position="310">
+          <caret line="64" column="43" selection-start-line="64" selection-start-column="43" selection-end-line="64" selection-end-column="43" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/johnson/michael/powerball/BallStatistics.java">
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-11.0.2.jdk/Contents/Home/lib/src.zip!/java.desktop/javax/swing/JFileChooser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="158">
-          <caret line="20" column="41" selection-start-line="20" selection-start-column="41" selection-end-line="20" selection-end-column="41" />
+        <state relative-caret-position="22">
+          <caret line="293" column="11" selection-start-line="293" selection-start-column="11" selection-end-line="293" selection-end-column="11" />
+          <folding>
+            <element signature="e#9389#9390#0" expanded="true" />
+            <element signature="e#9445#9446#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-11.0.2.jdk/Contents/Home/lib/src.zip!/java.desktop/javax/swing/JOptionPane.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="637" column="51" lean-forward="true" selection-start-line="637" selection-start-column="51" selection-end-line="637" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-11.0.2.jdk/Contents/Home/lib/src.zip!/java.base/java/util/Scanner.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="174">
+          <caret line="938" selection-start-line="938" selection-end-line="938" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/johnson/michael/powerball/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="26" column="27" selection-start-line="26" selection-start-column="27" selection-end-line="26" selection-end-column="27" />
+        <state relative-caret-position="337">
+          <caret line="54" column="5" selection-start-line="54" selection-start-column="5" selection-end-line="54" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/johnson/michael/powerball/PowerBallAnalysis.java">
+    <entry file="file://$PROJECT_DIR$/src/johnson/michael/powerball/PowerBallDrawing.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="271">
-          <caret line="169" column="51" lean-forward="true" selection-start-line="169" selection-start-column="51" selection-end-line="169" selection-end-column="51" />
+        <state relative-caret-position="290">
+          <caret line="90" column="26" selection-start-line="90" selection-start-column="26" selection-end-line="90" selection-end-column="26" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#2384#2402#0" expanded="true" />
+            <element signature="e#2875#2876#0" expanded="true" />
+            <element signature="e#2913#2914#0" expanded="true" />
+            <element signature="e#2944#2945#0" expanded="true" />
+            <element signature="e#2975#2976#0" expanded="true" />
           </folding>
         </state>
       </provider>

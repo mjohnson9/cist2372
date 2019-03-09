@@ -18,6 +18,10 @@ public class BallStatistics {
    */
   private int lastSeenIndex;
 
+  /**
+   * Creates a new statistics container for a ball.
+   * @param number The number of the ball that this container is for.
+   */
   public BallStatistics(final int number) {
     if (number < PowerBallDrawing.MIN_NUMBER || number > PowerBallDrawing.MAX_NUMBER) {
       throw new IllegalArgumentException("number is outside of the range ["

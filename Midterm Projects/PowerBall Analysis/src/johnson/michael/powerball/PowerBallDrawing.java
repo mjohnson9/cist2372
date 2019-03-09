@@ -4,6 +4,8 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.StringReader;
 import java.util.ArrayList;
+import java.util.InputMismatchException;
+import java.util.List;
 import java.util.Scanner;
 
 public class PowerBallDrawing {
@@ -37,6 +39,11 @@ public class PowerBallDrawing {
    */
   private int powerBall;
 
+  /**
+   * Constructs a new PowerBallDrawing object, representing one drawing.
+   * @param numbers The 5 numbers that were drawn in the PowerBall.
+   * @param powerBall The PowerBall number that was drawn.
+   */
   public PowerBallDrawing(final int[] numbers, final int powerBall) {
     // Validate numbers
     if (numbers.length != 5) {
@@ -61,8 +68,15 @@ public class PowerBallDrawing {
                                     // class and not a reference back to the caller's array
   }
 
-  public static PowerBallDrawing[] readFromFile(File file) throws FileNotFoundException {
-    ArrayList<PowerBallDrawing> powerBallDrawings = new ArrayList<>();
+  /**
+   * Reads a list of PowerBallDrawings from a file.
+   * @param file The file to read from.
+   * @return The drawings, in the order that they were in the file.
+   * @throws FileNotFoundException If {@code file} wasn't found.
+   */
+  public static PowerBallDrawing[] readFromFile(File file)
+      throws FileNotFoundException, InputMismatchException {
+    List<PowerBallDrawing> powerBallDrawings = new ArrayList<PowerBallDrawing>();
 
     final Scanner fileScanner = new Scanner(file);
     while (fileScanner.hasNext()) {

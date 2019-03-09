@@ -62,14 +62,7 @@ public class AnalysisFrame extends JFrame {
       row[1] = Integer.toString(rowStatistics.getFrequency());
     }
 
-    JPanel panel = new JPanel(false);
-    panel.setLayout(new GridLayout(1, 1));
-
-    JTable table = new JTable(rows, headers);
-    JScrollPane scrollPane = new JScrollPane(table);
-
-    panel.add(scrollPane);
-    return panel;
+    return this.createTable(rows, headers);
   }
 
   private JComponent createMostOverdueTable() {
@@ -85,6 +78,10 @@ public class AnalysisFrame extends JFrame {
       row[1] = String.format("%,d drawings ago", numDrawings - rowStatistics.getLastSeenIndex());
     }
 
+    return this.createTable(rows, headers);
+  }
+
+  private JComponent createTable(String[][] rows, String[] headers) {
     JPanel panel = new JPanel(false);
     panel.setLayout(new GridLayout(1, 1));
 
