@@ -2,15 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="44a9b663-f58e-4193-8563-b9229f9d1b1c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../No response before submission.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pbnumbers 2.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Response to another student same question.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Response to another student.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Lesson 8/Skateboard Designer/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Lesson 8/Skateboard Designer/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Lesson 8/Skateboard Designer/Skateboard Designer.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Lesson 8/Skateboard Designer/src/johnson/michael/skateboard/DesignFrame.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Lesson 8/Skateboard Designer/src/johnson/michael/skateboard/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Lesson 8/Skateboard Designer/src/johnson/michael/skateboard/PurchasableItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Payroll Class/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Payroll Class/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/johnson/michael/powerball/AnalysisFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/johnson/michael/powerball/AnalysisFrame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/johnson/michael/powerball/BallStatistics.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/johnson/michael/powerball/BallStatistics.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/johnson/michael/powerball/Drawing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/johnson/michael/powerball/Drawing.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../pre-commit.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../../pre-commit.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pbnumbers 2.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pbnumbers.txt" beforeDir="false" afterPath="$PROJECT_DIR$/pbnumbers.txt" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -20,20 +21,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/johnson/michael/powerball/AnalysisFrame.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="70" column="27" selection-start-line="70" selection-start-column="27" selection-end-line="70" selection-end-column="27" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -62,7 +50,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="y" value="23" />
     <option name="width" value="1920" />
     <option name="height" value="1007" />
@@ -76,6 +64,7 @@
     </navigator>
     <panes>
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -98,13 +87,13 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552165159769" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552254571466" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="restartRequiresConfirmation" value="false" />
@@ -146,18 +135,19 @@
       <workItem from="1552127648548" duration="13216000" />
       <workItem from="1552165294580" duration="456000" />
       <workItem from="1552250695194" duration="232000" />
-      <workItem from="1552250999066" duration="10000" />
+      <workItem from="1552250999066" duration="21000" />
+      <workItem from="1552251067320" duration="14000" />
+      <workItem from="1552254517376" duration="58000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14494000" />
+    <option name="totallyTimeSpent" value="14577000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1920" height="1007" extended-state="0" />
-    <editor active="true" />
+    <frame x="-3" y="23" width="1920" height="1007" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2603834" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2657082" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
