@@ -13,43 +13,47 @@ public final class Main {
    */
   private Main() {}
 
-  public static void main(String[] args) {
+  public static void main(final String[] args) {
     // Get the raw rolls
-    PowerBallDrawing[] rolls;
+    Drawing[] rolls;
     while (true) {
-      File chosenFile = chooseFile();
+      final File chosenFile = chooseFile();
       if (chosenFile == null) {
         // The user cancelled
         return;
       }
 
       try {
-        rolls = PowerBallDrawing.readFromFile(chosenFile);
+        rolls = Drawing.readFromFile(chosenFile);
         break;
-      } catch (FileNotFoundException ex) {
+      } catch (final FileNotFoundException ex) {
         JOptionPane.showMessageDialog(
             null, "The chosen file no longer exists.", "Error", JOptionPane.ERROR_MESSAGE);
-      } catch (InputMismatchException ex) {
+      } catch (final InputMismatchException ex) {
         JOptionPane.showMessageDialog(null, "The chosen file was not in the correct format.",
             "Error", JOptionPane.ERROR_MESSAGE);
       }
     }
 
     // Analyze the rolls
-    PowerBallAnalysis analysis = new PowerBallAnalysis(rolls);
+    final Analysis analysis = new Analysis(rolls);
 
     // Display the analysis
-    AnalysisFrame frame = new AnalysisFrame(analysis);
+    final AnalysisFrame frame = new AnalysisFrame(analysis);
     frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     frame.setVisible(true);
   }
 
+  /**
+   * Prompts the user to choose a lottery file, starting in the current working directory.
+   * @return The File chosen or null if the user cancelled the interaction.
+   */
   private static File chooseFile() {
-    JFileChooser chooser = new JFileChooser(System.getProperty("user.dir"));
+    final JFileChooser chooser = new JFileChooser(System.getProperty("user.dir"));
     chooser.setDialogTitle("Choose lottery file");
     chooser.setMultiSelectionEnabled(false);
     chooser.setFileSelectionMode(JFileChooser.FILES_ONLY);
-    int chosenOption = chooser.showOpenDialog(null);
+    final int chosenOption = chooser.showOpenDialog(null);
     if (chosenOption != JFileChooser.APPROVE_OPTION) {
       return null;
     }

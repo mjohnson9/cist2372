@@ -8,7 +8,10 @@ import java.util.InputMismatchException;
 import java.util.List;
 import java.util.Scanner;
 
-public class PowerBallDrawing {
+/**
+ * Drawing represents a single drawing in a PowerBall lottery.
+ */
+public class Drawing {
   /**
    * The minimum that an individual ball roll can be.
    */
@@ -33,24 +36,23 @@ public class PowerBallDrawing {
    * The five numbers that were rolled.
    */
 
-  private int[] numbers;
+  private final int[] numbers;
   /**
    * The PowerBall number.
    */
-  private int powerBall;
+  private final int powerBall;
 
   /**
-   * Constructs a new PowerBallDrawing object, representing one drawing.
+   * Constructs a new Drawing object, representing one drawing.
    * @param numbers The 5 numbers that were drawn in the PowerBall.
    * @param powerBall The PowerBall number that was drawn.
    */
-  public PowerBallDrawing(final int[] numbers, final int powerBall) {
+  public Drawing(final int[] numbers, final int powerBall) {
     // Validate numbers
     if (numbers.length != 5) {
       throw new IllegalArgumentException("numbers must be 5 elements in length");
     }
-    for (int i = 0; i < numbers.length; i++) {
-      final int number = numbers[i];
+    for (final int number : numbers) {
       if (number < MIN_NUMBER || number > MAX_NUMBER) {
         throw new IllegalArgumentException(
             "elements of numbers must be in the range of [" + MIN_NUMBER + ", " + MAX_NUMBER + "]");
@@ -69,38 +71,48 @@ public class PowerBallDrawing {
   }
 
   /**
-   * Reads a list of PowerBallDrawings from a file.
+   * Reads a list of Drawings from a file.
    * @param file The file to read from.
    * @return The drawings, in the order that they were in the file.
    * @throws FileNotFoundException If {@code file} wasn't found.
+   * @throws InputMismatchException When the input file does not conform to the expected format.
    */
-  public static PowerBallDrawing[] readFromFile(File file)
+  public static Drawing[] readFromFile(final File file)
       throws FileNotFoundException, InputMismatchException {
-    List<PowerBallDrawing> powerBallDrawings = new ArrayList<PowerBallDrawing>();
+    final List<Drawing> drawings = new ArrayList<>();
 
     final Scanner fileScanner = new Scanner(file);
     while (fileScanner.hasNext()) {
       final String line = fileScanner.nextLine();
       final Scanner lineReader = new Scanner(new StringReader(line));
 
-      int[] rolls = new int[5];
+      final int[] rolls = new int[5];
       for (int i = 0; i < rolls.length; i++) {
         rolls[i] = lineReader.nextInt();
       }
 
-      int powerBall = lineReader.nextInt();
-      powerBallDrawings.add(new PowerBallDrawing(rolls, powerBall));
+      final int powerBall = lineReader.nextInt();
+      drawings.add(new Drawing(rolls, powerBall));
     }
+    fileScanner.close();
 
-    PowerBallDrawing[] rollsArray = new PowerBallDrawing[powerBallDrawings.size()];
-    powerBallDrawings.toArray(rollsArray);
+    final Drawing[] rollsArray = new Drawing[drawings.size()];
+    drawings.toArray(rollsArray);
     return rollsArray;
   }
 
+  /**
+   * Gets the result of a roll for a specific ball.
+   * @param rollNum The roll number.
+   * @return The ball number.
+   */
   public int getNumber(final int rollNum) {
     return this.numbers[rollNum];
   }
 
+  /**
+   * @return The PowerBall number.
+   */
   public int getPowerBall() {
     return this.powerBall;
   }

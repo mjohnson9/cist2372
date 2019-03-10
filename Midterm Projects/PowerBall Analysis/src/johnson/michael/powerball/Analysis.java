@@ -5,11 +5,14 @@ import johnson.michael.powerball.BallStatistics.FrequencyComparator;
 import johnson.michael.powerball.BallStatistics.LastSeenComparator;
 import johnson.michael.powerball.BallStatistics.NumberComparator;
 
-public class PowerBallAnalysis {
+/**
+ * Analysis represents an analysis of PowerBallDrawings.
+ */
+public class Analysis {
   /**
    * The results of multiple PowerBall drawings.
    */
-  final PowerBallDrawing[] drawings;
+  private final Drawing[] drawings;
 
   /**
    * The ball statistics, ordered by ball number.
@@ -43,7 +46,7 @@ public class PowerBallAnalysis {
    * Analyzes a set of lottery drawings.
    * @param drawings The drawings to be analyzed.
    */
-  public PowerBallAnalysis(final PowerBallDrawing[] drawings) {
+  public Analysis(final Drawing[] drawings) {
     this.drawings =
         drawings.clone(); // Clone so that we have our own copy and not a reference to the caller's
     this.doAnalysis();
@@ -59,38 +62,46 @@ public class PowerBallAnalysis {
     this.analyzePowerBalls();
   }
 
+  /**
+   * Initializes the statistics member variables for later use in data gathering.
+   */
   private void initializeStatistics() {
-    this.ballStatistics =
-        new BallStatistics[PowerBallDrawing.MAX_NUMBER - PowerBallDrawing.MIN_NUMBER + 1];
+    this.ballStatistics = new BallStatistics[Drawing.MAX_NUMBER - Drawing.MIN_NUMBER + 1];
     for (int i = 0; i < this.ballStatistics.length; i++) {
-      this.ballStatistics[i] = new BallStatistics(PowerBallDrawing.MIN_NUMBER + i);
+      this.ballStatistics[i] = new BallStatistics(Drawing.MIN_NUMBER + i);
     }
 
     this.powerBallStatistics =
-        new BallStatistics[PowerBallDrawing.MAX_POWERBALL - PowerBallDrawing.MIN_POWERBALL + 1];
+        new BallStatistics[Drawing.MAX_POWERBALL - Drawing.MIN_POWERBALL + 1];
     for (int i = 0; i < this.powerBallStatistics.length; i++) {
-      this.powerBallStatistics[i] = new BallStatistics(PowerBallDrawing.MIN_POWERBALL + i);
+      this.powerBallStatistics[i] = new BallStatistics(Drawing.MIN_POWERBALL + i);
     }
   }
 
+  /**
+   * Gathers the statistical data from {@code Drawing}s.
+   */
   private void gatherData() {
     for (int i = 0; i < this.drawings.length; i++) {
-      PowerBallDrawing drawing = this.drawings[i];
+      final Drawing drawing = this.drawings[i];
 
       for (int j = 0; j < 5; j++) {
-        int number = drawing.getNumber(j);
-        BallStatistics statistics = this.ballStatistics[number - PowerBallDrawing.MIN_NUMBER];
+        final int number = drawing.getNumber(j);
+        final BallStatistics statistics = this.ballStatistics[number - Drawing.MIN_NUMBER];
         statistics.setLastSeenIndex(i);
         statistics.setFrequency(statistics.getFrequency() + 1);
       }
 
-      BallStatistics powerBall =
-          this.powerBallStatistics[drawing.getPowerBall() - PowerBallDrawing.MIN_POWERBALL];
+      final BallStatistics powerBall =
+          this.powerBallStatistics[drawing.getPowerBall() - Drawing.MIN_POWERBALL];
       powerBall.setLastSeenIndex(i);
       powerBall.setFrequency(powerBall.getFrequency() + 1);
     }
   }
 
+  /**
+   * Fills the statistics arrays for regular balls.
+   */
   private void analyzeBalls() {
     // Sort the RollNumber objects in order of their frequency
     Arrays.sort(this.ballStatistics, new FrequencyComparator());
@@ -120,6 +131,9 @@ public class PowerBallAnalysis {
     Arrays.sort(this.ballStatistics, new NumberComparator());
   }
 
+  /**
+   * Fills the statistics arrays for PowerBalls.
+   */
   private void analyzePowerBalls() {
     // Sort by frequency for getting the most common numbers
     Arrays.sort(this.powerBallStatistics, new FrequencyComparator());
@@ -138,7 +152,7 @@ public class PowerBallAnalysis {
   /**
    * @return A clone of the drawings array.
    */
-  public PowerBallDrawing[] getDrawings() {
+  public Drawing[] getDrawings() {
     return this.drawings.clone();
   }
 

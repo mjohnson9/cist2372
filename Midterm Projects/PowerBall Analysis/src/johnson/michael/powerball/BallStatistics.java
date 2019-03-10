@@ -2,11 +2,14 @@ package johnson.michael.powerball;
 
 import java.util.Comparator;
 
+/**
+ * BallStatistics represents statistical information about a single ball.
+ */
 public class BallStatistics {
   /**
    * The number of the ball.
    */
-  private int number;
+  private final int number;
 
   /**
    * The number of times the ball has been seen.
@@ -23,12 +26,14 @@ public class BallStatistics {
    * @param number The number of the ball that this container is for.
    */
   public BallStatistics(final int number) {
-    if (number < PowerBallDrawing.MIN_NUMBER || number > PowerBallDrawing.MAX_NUMBER) {
-      throw new IllegalArgumentException("number is outside of the range ["
-          + PowerBallDrawing.MIN_NUMBER + ", " + PowerBallDrawing.MAX_NUMBER + "]");
+    if (number < Drawing.MIN_NUMBER || number > Drawing.MAX_NUMBER) {
+      throw new IllegalArgumentException("number is outside of the range [" + Drawing.MIN_NUMBER
+          + ", " + Drawing.MAX_NUMBER + "]");
     }
 
     this.number = number;
+    this.setFrequency(0);
+    this.setLastSeenIndex(0);
   }
 
   /**
@@ -68,23 +73,32 @@ public class BallStatistics {
     this.lastSeenIndex = lastSeenIndex;
   }
 
+  /**
+   * NumberComparator is a Comparator for BallStatistics that compares the ball numbers.
+   */
   public static class NumberComparator implements Comparator<BallStatistics> {
     @Override
-    public int compare(BallStatistics o1, BallStatistics o2) {
+    public int compare(final BallStatistics o1, final BallStatistics o2) {
       return o1.getNumber() - o2.getNumber();
     }
   }
 
+  /**
+   * LastSeenComparator is a Comparator for BallStatistics that compares the lastSeenIndex.
+   */
   public static class LastSeenComparator implements Comparator<BallStatistics> {
     @Override
-    public int compare(BallStatistics o1, BallStatistics o2) {
+    public int compare(final BallStatistics o1, final BallStatistics o2) {
       return o1.getLastSeenIndex() - o2.getLastSeenIndex();
     }
   }
 
+  /**
+   * FrequencyComparator is a Comparator for BallStatistics that compares the frequencies.
+   */
   public static class FrequencyComparator implements Comparator<BallStatistics> {
     @Override
-    public int compare(BallStatistics o1, BallStatistics o2) {
+    public int compare(final BallStatistics o1, final BallStatistics o2) {
       return o1.getFrequency() - o2.getFrequency();
     }
   }
