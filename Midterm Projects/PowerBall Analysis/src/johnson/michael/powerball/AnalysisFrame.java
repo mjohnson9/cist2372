@@ -81,7 +81,11 @@ public class AnalysisFrame extends JFrame {
       final String[] row = rows[i];
       final BallStatistics rowStatistics = mostOverdue[i];
       row[0] = Integer.toString(rowStatistics.getNumber());
-      row[1] = String.format("%,d drawings ago", numDrawings - rowStatistics.getLastSeenIndex());
+      if (rowStatistics.getLastSeenIndex() == -1) {
+        row[1] = "Never seen";
+      } else {
+        row[1] = String.format("%,d drawings ago", numDrawings - rowStatistics.getLastSeenIndex());
+      }
     }
 
     return this.createTable(rows, headers);

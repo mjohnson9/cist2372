@@ -2,12 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="44a9b663-f58e-4193-8563-b9229f9d1b1c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../No response before submission.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pbnumbers 2.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Response to another student same question.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Response to another student.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/johnson/michael/powerball/AnalysisFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/johnson/michael/powerball/AnalysisFrame.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/johnson/michael/powerball/BallStatistics.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/johnson/michael/powerball/BallStatistics.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/johnson/michael/powerball/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/johnson/michael/powerball/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/johnson/michael/powerball/PowerBallAnalysis.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/johnson/michael/powerball/Analysis.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/johnson/michael/powerball/PowerBallDrawing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/johnson/michael/powerball/Drawing.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/johnson/michael/powerball/Drawing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/johnson/michael/powerball/Drawing.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../pre-commit.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../../pre-commit.sh" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -17,7 +20,20 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/johnson/michael/powerball/AnalysisFrame.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="200">
+              <caret line="70" column="27" selection-start-line="70" selection-start-column="27" selection-end-line="70" selection-end-column="27" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -37,10 +53,10 @@
       <list>
         <option value="$PROJECT_DIR$/src/johnson/michael/powerball/PowerBallRoll.java" />
         <option value="$PROJECT_DIR$/src/johnson/michael/powerball/NumberStatistics.java" />
-        <option value="$PROJECT_DIR$/src/johnson/michael/powerball/BallStatistics.java" />
         <option value="$PROJECT_DIR$/src/johnson/michael/powerball/Main.java" />
         <option value="$PROJECT_DIR$/src/johnson/michael/powerball/PowerBallAnalysis.java" />
         <option value="$PROJECT_DIR$/src/johnson/michael/powerball/PowerBallDrawing.java" />
+        <option value="$PROJECT_DIR$/src/johnson/michael/powerball/BallStatistics.java" />
         <option value="$PROJECT_DIR$/src/johnson/michael/powerball/Drawing.java" />
         <option value="$PROJECT_DIR$/src/johnson/michael/powerball/AnalysisFrame.java" />
       </list>
@@ -59,7 +75,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -82,7 +98,7 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -129,16 +145,19 @@
       <workItem from="1552127028484" duration="580000" />
       <workItem from="1552127648548" duration="13216000" />
       <workItem from="1552165294580" duration="456000" />
+      <workItem from="1552250695194" duration="232000" />
+      <workItem from="1552250999066" duration="10000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14252000" />
+    <option name="totallyTimeSpent" value="14494000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1920" height="1007" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2550586" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2603834" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -242,48 +261,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Downloads/File Array/File Array.iml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/johnson/michael/powerball/BallStatistics.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="96" column="90" selection-start-line="96" selection-start-column="90" selection-end-line="96" selection-end-column="90" />
-          <folding>
-            <element signature="e#964#965#0" expanded="true" />
-            <element signature="e#992#993#0" expanded="true" />
-            <element signature="e#1093#1094#0" expanded="true" />
-            <element signature="e#1124#1125#0" expanded="true" />
-            <element signature="e#1309#1310#0" expanded="true" />
-            <element signature="e#1345#1346#0" expanded="true" />
-            <element signature="e#1458#1459#0" expanded="true" />
-            <element signature="e#1493#1494#0" expanded="true" />
-            <element signature="e#1702#1703#0" expanded="true" />
-            <element signature="e#1746#1747#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/Downloads/File Array/File Array.iml" />
     <entry file="file://$PROJECT_DIR$/src/johnson/michael/powerball/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="184">
           <caret line="25" column="11" lean-forward="true" selection-start-line="25" selection-start-column="11" selection-end-line="25" selection-end-column="11" />
           <folding>
             <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/johnson/michael/powerball/Drawing.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1095">
-          <caret line="73" column="17" lean-forward="true" selection-start-line="73" selection-start-column="17" selection-end-line="73" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#3366#3367#0" expanded="true" />
-            <element signature="e#3404#3405#0" expanded="true" />
-            <element signature="e#3546#3547#0" expanded="true" />
-            <element signature="e#3577#3578#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -310,10 +294,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/johnson/michael/powerball/BallStatistics.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="42" selection-start-line="20" selection-start-column="42" selection-end-line="20" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/johnson/michael/powerball/Drawing.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="205">
+          <caret line="14" column="5" lean-forward="true" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/johnson/michael/powerball/AnalysisFrame.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="645">
-          <caret line="43" lean-forward="true" selection-start-line="43" selection-end-line="43" />
+        <state relative-caret-position="200">
+          <caret line="70" column="27" selection-start-line="70" selection-start-column="27" selection-end-line="70" selection-end-column="27" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

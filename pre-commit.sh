@@ -2,7 +2,7 @@
 
 SAVEIFS=$IFS
 IFS=$'\n'
-CHANGED_FILES=($(git diff --cached --name-only --diff-filter=ACMRT | grep '\.java$'))
+CHANGED_FILES=($(git diff --cached --name-only --diff-filter=ACMRT | grep -E '\.java$'))
 IFS=$SAVEIFS
 unset SAVEIFS
 

@@ -18,6 +18,7 @@ public class BallStatistics {
 
   /**
    * The index of the last drawing that the ball was seen in.
+   * -1 means that it has never been seen.
    */
   private int lastSeenIndex;
 
@@ -33,7 +34,7 @@ public class BallStatistics {
 
     this.number = number;
     this.setFrequency(0);
-    this.setLastSeenIndex(0);
+    this.setLastSeenIndex(-1);
   }
 
   /**

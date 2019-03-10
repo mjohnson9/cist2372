@@ -30,7 +30,7 @@ public class Drawing {
   /**
    * The maximum that a PowerBall number can be.
    */
-  public static final int MAX_POWERBALL = 42;
+  public static final int MAX_POWERBALL = 35;
 
   /**
    * The five numbers that were rolled.
