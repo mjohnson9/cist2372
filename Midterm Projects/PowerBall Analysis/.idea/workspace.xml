@@ -1,18 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="44a9b663-f58e-4193-8563-b9229f9d1b1c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../../Lesson 8/Skateboard Designer/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Lesson 8/Skateboard Designer/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Lesson 8/Skateboard Designer/Skateboard Designer.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Lesson 8/Skateboard Designer/src/johnson/michael/skateboard/DesignFrame.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Lesson 8/Skateboard Designer/src/johnson/michael/skateboard/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Lesson 8/Skateboard Designer/src/johnson/michael/skateboard/PurchasableItem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Payroll Class/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Payroll Class/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pbnumbers 2.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pbnumbers.txt" beforeDir="false" afterPath="$PROJECT_DIR$/pbnumbers.txt" afterDir="false" />
-    </list>
+    <list default="true" id="44a9b663-f58e-4193-8563-b9229f9d1b1c" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -63,8 +52,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -138,16 +127,17 @@
       <workItem from="1552250999066" duration="21000" />
       <workItem from="1552251067320" duration="14000" />
       <workItem from="1552254517376" duration="58000" />
+      <workItem from="1552665154872" duration="26000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14577000" />
+    <option name="totallyTimeSpent" value="14603000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-3" y="23" width="1920" height="1007" extended-state="6" />
+    <frame x="0" y="23" width="1920" height="1007" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2657082" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2683706" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
