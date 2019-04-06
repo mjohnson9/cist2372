@@ -25,15 +25,15 @@ public enum RoomType {
   public String toString() {
     switch (this) {
       case DOUBLE_HOTEL_ROOMS:
-        return "Room type: Double Hotel Rooms";
+        return "Double";
       case DOUBLE_SUITE_HOTEL_ROOMS:
-        return "Room type: Double Suite Hotel Rooms";
+        return "Double Suite";
       case KING_HOTEL_ROOMS:
-        return "Room type: King Hotel Rooms";
+        return "King";
       case KING_SUITE_HOTEL_ROOMS:
-        return "Room type: King Suite Hotel Rooms";
+        return "King Suite";
       default:
-        return "Room type: Unknown (" + this + ")";
+        return "Unknown";
     }
   }
 

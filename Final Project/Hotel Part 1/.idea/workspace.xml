@@ -2,7 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="67e31166-05f5-41e9-8576-c2150b9e06e6" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../Hotel Part 2/src/johnson/michael/hotel/BookHotelRoom.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Hotel Part 2/src/johnson/michael/hotel/Guest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Hotel Part 2/src/johnson/michael/hotel/Reservation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Hotel Part 2/src/johnson/michael/hotel/ReservationStatus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Hotel Part 2/src/johnson/michael/hotel/Status.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Hotel Part 2/src/johnson/michael/hotel/exceptions/NoVacancyException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Hotel Part 2/src/johnson/michael/hotel/exceptions/OverCapacityException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Hotel Part 2/src/johnson/michael/hotel/exceptions/UserCancelledException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/johnson/michael/hotel/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/johnson/michael/hotel/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/johnson/michael/hotel/RoomType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/johnson/michael/hotel/RoomType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hotel Part 2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Hotel Part 2/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hotel Part 2/src/johnson/michael/hotel/Hotel.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Hotel Part 2/src/johnson/michael/hotel/Hotel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hotel Part 2/src/johnson/michael/hotel/HotelRoom.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Hotel Part 2/src/johnson/michael/hotel/HotelRoom.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hotel Part 2/src/johnson/michael/hotel/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Hotel Part 2/src/johnson/michael/hotel/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hotel Part 2/src/johnson/michael/hotel/RoomType.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Hotel Part 2/src/johnson/michael/hotel/RoomType.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -12,7 +27,20 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/johnson/michael/hotel/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="20" column="68" selection-start-line="20" selection-start-column="68" selection-end-line="20" selection-end-column="68" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -55,7 +83,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -78,7 +106,7 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -124,16 +152,20 @@
       <workItem from="1554479943255" duration="9833000" />
       <workItem from="1554573748560" duration="4205000" />
       <workItem from="1554579513050" duration="81000" />
+      <workItem from="1554580727920" duration="15000" />
+      <workItem from="1554586045168" duration="10000" />
+      <workItem from="1554589356134" duration="18000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14119000" />
+    <option name="totallyTimeSpent" value="14162000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1920" height="1009" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2550586" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2630458" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -227,23 +259,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/johnson/michael/hotel/Hotel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="83" selection-start-line="5" selection-start-column="83" selection-end-line="5" selection-end-column="83" />
-          <folding>
-            <element signature="e#2355#2356#0" expanded="true" />
-            <element signature="e#2387#2388#0" expanded="true" />
-            <element signature="e#3132#3133#0" expanded="true" />
-            <element signature="e#3180#3181#0" expanded="true" />
-            <element signature="e#3814#3815#0" expanded="true" />
-            <element signature="e#3876#3877#0" expanded="true" />
-            <element signature="e#4300#4301#0" expanded="true" />
-            <element signature="e#4360#4361#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/johnson/michael/hotel/KingSuiteHotelRooms.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
@@ -253,15 +268,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/johnson/michael/hotel/RoomType.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="54" lean-forward="true" selection-start-line="19" selection-start-column="54" selection-end-line="19" selection-end-column="54" />
+        <state relative-caret-position="525">
+          <caret line="35" column="34" selection-start-line="35" selection-start-column="34" selection-end-line="35" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/johnson/michael/hotel/Hotel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="83" selection-start-line="5" selection-start-column="83" selection-end-line="5" selection-end-column="83" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/johnson/michael/hotel/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="857">
-          <caret line="62" column="54" lean-forward="true" selection-start-line="62" selection-start-column="54" selection-end-line="62" selection-end-column="54" />
+        <state relative-caret-position="300">
+          <caret line="20" column="68" selection-start-line="20" selection-start-column="68" selection-end-line="20" selection-end-column="68" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

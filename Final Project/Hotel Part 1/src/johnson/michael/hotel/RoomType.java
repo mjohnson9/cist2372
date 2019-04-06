@@ -33,7 +33,7 @@ public enum RoomType {
       case KING_SUITE_HOTEL_ROOMS:
         return "Room type: King Suite Hotel Rooms";
       default:
-        return "Room type: Unknown (" + this + ")";
+        return "Room type: Unknown";
     }
   }
 

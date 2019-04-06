@@ -15,10 +15,10 @@ public final class Main {
 
   static {
     // Initialize ROOM_OPTIONS
-    ROOM_OPTIONS.put("King Suite", RoomType.KING_SUITE_HOTEL_ROOMS);
-    ROOM_OPTIONS.put("King", RoomType.KING_HOTEL_ROOMS);
-    ROOM_OPTIONS.put("Double Suite", RoomType.DOUBLE_SUITE_HOTEL_ROOMS);
     ROOM_OPTIONS.put("Double", RoomType.DOUBLE_HOTEL_ROOMS);
+    ROOM_OPTIONS.put("Double Suite", RoomType.DOUBLE_SUITE_HOTEL_ROOMS);
+    ROOM_OPTIONS.put("King", RoomType.KING_HOTEL_ROOMS);
+    ROOM_OPTIONS.put("King Suite", RoomType.KING_SUITE_HOTEL_ROOMS);
   }
 
   /**
@@ -63,7 +63,7 @@ public final class Main {
    * @return The number of nights that the user chose.
    */
   private static int promptNumberOfNights() {
-    final Integer[] options = new Integer[365];
+    final Integer[] options = new Integer[31];
     for (int i = 0; i < options.length; i++) {
       options[i] = i + 1;
     }

@@ -1,12 +1,13 @@
 package johnson.michael.hotel;
 
 import java.util.ArrayList;
+import johnson.michael.hotel.exceptions.NoVacancyException;
+import johnson.michael.hotel.exceptions.OverCapacityException;
 
 /**
  * Represents a Hotel. Allows booking of rooms as well as retrieving the room list.
  */
-@SuppressWarnings({"ClassNamePrefixedWithPackageName", "NewClassNamingConvention"})
-public class Hotel {
+public class Hotel implements BookHotelRoom {
   /**
    * The number of hotel room types.
    */
@@ -36,6 +37,10 @@ public class Hotel {
    * The list of hotel rooms.
    */
   private ArrayList<HotelRoom> hotelRooms;
+  /**
+   * The list of reservations.
+   */
+  private ArrayList<Reservation> reservations;
 
   /**
    * Constructs an instance of this class. It initializes the hotel room list with 5 rooms of each
@@ -44,6 +49,7 @@ public class Hotel {
   public Hotel() {
     // Initialize hotelRooms with a capacity equal to the number of rooms we're about to add
     this.setHotelRooms(new ArrayList<>(NUM_ROOM_TYPES * NUM_ROOMS_PER_TYPE));
+    this.setReservations(new ArrayList<>());
 
     for (int i = 0; i < NUM_ROOMS_PER_TYPE; i++) {
       final DoubleHotelRooms room = new DoubleHotelRooms();
@@ -86,6 +92,30 @@ public class Hotel {
     this.hotelRooms = hotelRooms;
   }
 
+  /**
+   * Retrieves the list of reservations.
+   * @return The list of reservations.
+   */
+  public ArrayList<Reservation> getReservations() {
+    return this.reservations;
+  }
+
+  /**
+   * Sets the list of reservations.
+   * @param reservations The new list of reservations.
+   */
+  private void setReservations(final ArrayList<Reservation> reservations) {
+    this.reservations = reservations;
+  }
+
+  /**
+   * Removes a reservation from the list.
+   * @param reservation The reservation to be removed.
+   */
+  public void removeReservation(final Reservation reservation) {
+    this.reservations.remove(reservation);
+  }
+
   @Override
   public boolean equals(final Object obj) {
     if (!(obj instanceof Hotel)) {
@@ -126,61 +156,35 @@ public class Hotel {
     return false;
   }
 
-  /**
-   * Books a double hotel room.
-   * @return The average nightly rate of the booked room or 0 if no rooms could be found.
-   */
-  public double bookDoubleHotelRoom() {
-    return this.bookHotelRoom(RoomType.DOUBLE_HOTEL_ROOMS);
-  }
+  @Override
+  public Reservation bookRoom(final RoomType roomType, final Guest guest, final int numberOfNights)
+      throws NoVacancyException, OverCapacityException {
+    final int partySize = guest.getNumberAdultsInParty() + guest.getNumberChildrenInParty();
 
-  /**
-   * Books a double suite hotel room.
-   * @return The average nightly rate of the booked room or 0 if no rooms could be found.
-   */
-  public double bookDoubleSuiteHotelRoom() {
-    return this.bookHotelRoom(RoomType.DOUBLE_SUITE_HOTEL_ROOMS);
-  }
-
-  /**
-   * Books a king hotel room.
-   * @return The average nightly rate of the booked room or 0 if no rooms could be found.
-   */
-  public double bookKingHotelRoom() {
-    return this.bookHotelRoom(RoomType.KING_HOTEL_ROOMS);
-  }
-
-  /**
-   * Books a king suite hotel room.
-   * @return The average nightly rate of the booked room or 0 if no rooms could be found.
-   */
-  public double bookKingSuiteHotelRoom() {
-    return this.bookHotelRoom(RoomType.KING_SUITE_HOTEL_ROOMS);
-  }
-
-  /**
-   * Books a hotel room of the specified type.
-   * @param roomType The {@see RoomType} of the room to book.
-   * @return The average nightly rate of the room booked or 0 if no vacant rooms of the given type
-   *     were found.
-   */
-  private double bookHotelRoom(final RoomType roomType) {
     for (final HotelRoom room : this.hotelRooms) {
       if (room.getRoomType() != roomType) {
-        // Ignore this room, it's not of the correct type
+        // Ignore this room, it's not of the correct type.
         continue;
       }
 
-      if (!room.isVacant()) {
-        // Ignore this room, it's occupied
+      if (room.getCapacity() < partySize) {
+        // Fail fast: all rooms of a given type have the same capacity. We can throw an
+        // OverCapacityException here regardless of whether this particular room is booked or
+        // occupied.
+        throw new OverCapacityException(room.getCapacity(), partySize);
+      }
+
+      if (!room.isVacant() || room.isReserved()) {
+        // This room is occupied and/or reserved. We can't use it in a reservation.
         continue;
       }
 
-      // We found an unoccupied room of the correct type
-      room.setVacant(false);
-      return room.getAverageNightlyPrice();
+      final Reservation reservation = new Reservation(this, guest, room, numberOfNights);
+      room.setReserved(true);
+      this.reservations.add(reservation);
+      return reservation;
     }
 
-    return 0.00d; // We didn't find any vacant rooms of the correct type
+    throw new NoVacancyException();
   }
 }
