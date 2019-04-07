@@ -3,7 +3,6 @@ package johnson.michael.hotel;
 /**
  * A KingSuiteHotelRooms is a {@see KingHotelRooms} with a micro fridge.
  */
-@SuppressWarnings("ClassTooDeepInInheritanceTree")
 public class KingSuiteHotelRooms extends KingHotelRooms {
   /**
    * Constructs an instance of this class.

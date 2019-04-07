@@ -5,7 +5,6 @@ import java.util.ArrayList;
 /**
  * Represents a Hotel. Allows booking of rooms as well as retrieving the room list.
  */
-@SuppressWarnings({"ClassNamePrefixedWithPackageName", "NewClassNamingConvention"})
 public class Hotel {
   /**
    * The number of hotel room types.

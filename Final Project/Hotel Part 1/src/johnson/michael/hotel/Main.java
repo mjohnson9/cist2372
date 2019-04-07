@@ -6,7 +6,6 @@ import javax.swing.JOptionPane;
 /**
  * The class containing the program entrypoint and handling user interaction.
  */
-@SuppressWarnings("NewClassNamingConvention")
 public final class Main {
   /**
    * The room options available to the user. A {@see LinkedHashMap} is used to preserve ordering.
@@ -53,7 +52,6 @@ public final class Main {
       System.exit(0);
     }
 
-    // noinspection SuspiciousMethodCalls
     return ROOM_OPTIONS.get(choice);
   }
 

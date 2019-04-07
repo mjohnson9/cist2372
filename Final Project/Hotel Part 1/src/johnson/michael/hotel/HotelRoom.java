@@ -3,7 +3,6 @@ package johnson.michael.hotel;
 /**
  * Base class for any hotel room classes.
  */
-@SuppressWarnings("ClassNamePrefixedWithPackageName")
 public abstract class HotelRoom {
   /**
    * The capacity of the hotel room.
