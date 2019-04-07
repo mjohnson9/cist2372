@@ -5,12 +5,40 @@ package johnson.michael.hotel.exceptions;
  */
 public class OverCapacityException extends Exception {
   /**
+   * The maximum capacity of the room.
+   */
+  private final int roomCapacity;
+  /**
+   * The size of the party that tried to book the room.
+   */
+  private final int partySize;
+
+  /**
    * Constructs an instance of this class with a formatted message.
    * @param roomCapacity The capacity of the room chosen.
-   * @param occupants How many members of the party there were.
+   * @param partySize How many members of the party there were.
    */
-  public OverCapacityException(final int roomCapacity, final int occupants) {
-    super("The room is only large enough for " + roomCapacity + ", not " + occupants);
+  public OverCapacityException(final int roomCapacity, final int partySize) {
+    super("The room is only large enough for " + roomCapacity + ", not " + partySize);
+
+    this.roomCapacity = roomCapacity;
+    this.partySize = partySize;
+  }
+
+  /**
+   * Retrieves the capacity of the room that was being booked when this exception was thrown.
+   * @return The capacity of the room.
+   */
+  public int getRoomCapacity() {
+    return this.roomCapacity;
+  }
+
+  /**
+   * Retrieves the party size attempting to book the room that caused this exception.
+   * @return The party size.
+   */
+  public int getPartySize() {
+    return this.partySize;
   }
 
   // the default Exception toString is adequate for this class

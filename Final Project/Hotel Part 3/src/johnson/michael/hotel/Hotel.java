@@ -1,5 +1,6 @@
 package johnson.michael.hotel;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import johnson.michael.hotel.exceptions.NoVacancyException;
 import johnson.michael.hotel.exceptions.OverCapacityException;
@@ -7,7 +8,8 @@ import johnson.michael.hotel.exceptions.OverCapacityException;
 /**
  * Represents a Hotel. Allows booking of rooms as well as retrieving the room list.
  */
-public class Hotel implements BookHotelRoom {
+@SuppressWarnings("ALL")
+public class Hotel implements BookHotelRoom, Serializable {
   /**
    * The number of hotel room types.
    */
@@ -116,32 +118,6 @@ public class Hotel implements BookHotelRoom {
     this.reservations.remove(reservation);
   }
 
-  @Override
-  public boolean equals(final Object obj) {
-    if (!(obj instanceof Hotel)) {
-      // We're not comparing to another hotel; they'll never be equal
-      return false;
-    }
-
-    final Hotel other = (Hotel) obj;
-
-    // Two Hotels are equal if they reference the same room list
-    return this.getHotelRooms() == other.getHotelRooms();
-  }
-
-  // In order to not violate the invariant that equal objects have equal hashCodes, we have to
-  // implement hashCode to do the same as our equals method.
-  @Override
-  public int hashCode() {
-    return this.getHotelRooms().hashCode();
-  }
-
-  @Override
-  public String toString() {
-    return "Hotel with " + this.hotelRooms.size() + " rooms\n"
-        + (this.hasVacancy() ? "Not full" : "Full");
-  }
-
   /**
    * Checks if the hotel has any vacant rooms.
    * @return true if the hotel has a vacant room, false otherwise.
@@ -186,5 +162,31 @@ public class Hotel implements BookHotelRoom {
     }
 
     throw new NoVacancyException();
+  }
+
+  @Override
+  public boolean equals(final Object obj) {
+    if (!(obj instanceof Hotel)) {
+      // We're not comparing to another hotel; they'll never be equal
+      return false;
+    }
+
+    final Hotel other = (Hotel) obj;
+
+    // Two Hotels are equal if they reference the same room list
+    return this.getHotelRooms() == other.getHotelRooms();
+  }
+
+  // In order to not violate the invariant that equal objects have equal hashCodes, we have to
+  // implement hashCode to do the same as our equals method.
+  @Override
+  public int hashCode() {
+    return this.getHotelRooms().hashCode();
+  }
+
+  @Override
+  public String toString() {
+    return "Hotel with " + this.hotelRooms.size() + " rooms\n"
+        + (this.hasVacancy() ? "Not full" : "Full");
   }
 }

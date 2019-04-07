@@ -6,6 +6,7 @@
         <option value="activate" />
         <option value="organizeImports" />
         <option value="rearrange" />
+        <option value="reload" />
       </set>
     </option>
     <option name="configurationPath" value="" />

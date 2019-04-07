@@ -17,11 +17,11 @@ public enum Status {
   public String toString() {
     switch (this) {
       case INVALID:
-        return "Reservation status: Invalid";
+        return "Invalid";
       case VALID:
-        return "Reservation status: Valid";
+        return "Valid";
       default:
-        return "Reservation status: Unknown";
+        return "Unknown";
     }
   }
 

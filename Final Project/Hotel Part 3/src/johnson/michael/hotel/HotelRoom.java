@@ -1,9 +1,11 @@
 package johnson.michael.hotel;
 
+import java.io.Serializable;
+
 /**
  * Base class for any hotel room classes.
  */
-public abstract class HotelRoom {
+public abstract class HotelRoom implements Serializable {
   /**
    * The capacity of the hotel room.
    */

@@ -1,9 +1,11 @@
 package johnson.michael.hotel;
 
+import java.io.Serializable;
+
 /**
  * Represents a reservation for a hotel room.
  */
-public class Reservation implements ReservationStatus {
+public class Reservation implements ReservationStatus, Serializable {
   /**
    * The current reservation number. It's assigned and then incremented by 1 for every reservation,
    * giving each reservation a unique number.
@@ -61,6 +63,23 @@ public class Reservation implements ReservationStatus {
     this.setHotelRoom(room);
     this.setRoomType(room.getRoomType());
     this.setNumberOfNights(numberOfNights); // totalCostForTheStay will be calculated by this call
+  }
+
+  /**
+   * Retrieves the static reservation number that is used to create unique reservation numbers. This
+   * is called when serializing data.
+   * @return The reservation counter.
+   */
+  public static int getStaticReservationNumber() {
+    return currentReservationNumber;
+  }
+
+  /**
+   * Sets the static reservation number. This is called when deserializing data.
+   * @param reservationNumber The new reservation counter.
+   */
+  public static void setStaticReservationNumber(final int reservationNumber) {
+    currentReservationNumber = reservationNumber;
   }
 
   /**

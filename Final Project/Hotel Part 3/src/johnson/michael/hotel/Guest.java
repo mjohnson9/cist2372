@@ -1,9 +1,11 @@
 package johnson.michael.hotel;
 
+import java.io.Serializable;
+
 /**
  * Represents a guest and their party.
  */
-public class Guest {
+public class Guest implements Serializable {
   /**
    * The guest's first name.
    */
