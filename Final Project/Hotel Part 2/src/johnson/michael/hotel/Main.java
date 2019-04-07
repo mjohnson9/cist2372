@@ -57,8 +57,13 @@ public final class Main {
    * @param hotel The {@see Hotel} that should be used for the menus.
    */
   private static void mainMenu(final Hotel hotel) {
+    // Loop until the user presses cancel on the main menu prompt
     while (true) {
       final String mainMenuChoice = promptMainMenu();
+      if (mainMenuChoice == null) {
+        // The user chose cancel on the main menu prompt; exit the program
+        break;
+      }
 
       try {
         switch (mainMenuChoice) {
@@ -93,7 +98,7 @@ public final class Main {
         "Hotel", JOptionPane.QUESTION_MESSAGE, null, MAIN_MENU_OPTIONS, MAIN_MENU_OPTIONS[0]);
     if (objChoice == null) {
       // User chose cancel
-      System.exit(0);
+      return null;
     }
 
     return (String) objChoice;
@@ -310,11 +315,11 @@ public final class Main {
    */
   private static void promptGuestName(final Guest guest) throws UserCancelledException {
     final String firstName =
-        promptString("Please enter your first name:", false, "Your first name cannot be blank.");
+        promptString("Please enter your first name:", "Your first name cannot be blank.");
     guest.setFirstName(firstName);
 
     final String lastName =
-        promptString("Please enter your last name:", false, "Your last name cannot be blank.");
+        promptString("Please enter your last name:", "Your last name cannot be blank.");
     guest.setLastName(lastName);
   }
 
@@ -324,16 +329,13 @@ public final class Main {
    * @throws UserCancelledException Thrown when the user presses the cancel button.
    */
   private static void promptAddress(final Guest guest) throws UserCancelledException {
-    final String streetAddress = promptString(
-        "Please enter your street address:", false, "Your street address cannot be blank.");
-    final String city =
-        promptString("Please enter your city:", false, "Your city cannot be blank.");
-    final String state =
-        promptString("Please enter your state:", false, "Your state cannot be blank.");
+    final String streetAddress =
+        promptString("Please enter your street address:", "Your street address cannot be blank.");
+    final String city = promptString("Please enter your city:", "Your city cannot be blank.");
+    final String state = promptString("Please enter your state:", "Your state cannot be blank.");
     String zip;
     while (true) { // Loop until we get a valid ZIP
-      zip = promptString(
-          "Please enter your 5-digit ZIP code:", false, "Your ZIP code cannot be blank.");
+      zip = promptString("Please enter your 5-digit ZIP code:", "Your ZIP code cannot be blank.");
 
       if (zip.length() != 5) {
         // The ZIP is not 5 characters long
@@ -388,8 +390,9 @@ public final class Main {
       final Reservation reservation = hotel.bookRoom(roomType, guest, numNights);
 
       JOptionPane.showMessageDialog(null,
-          String.format(
-              "Your reservation number is %d%nYour stay will cost $%.2f.%nPlease check in when you're ready.",
+          String.format("Your reservation number is %d%n"
+                  + "Your stay will cost $%.2f.%n"
+                  + "Please check in when you're ready.",
               reservation.getReservationNumber(), reservation.getTotalCostForTheStay()),
           "Hotel", JOptionPane.INFORMATION_MESSAGE);
     } catch (final NoVacancyException ex) {
@@ -405,15 +408,14 @@ public final class Main {
   /**
    * Prompts the user to enter a string. Optionally validates that the string isn't empty.
    * @param message The message to display to the user.
-   * @param allowEmpty Whether or not to allow an empty string.
-   * @param emptyErrorMessage The error message to display when the user enters an empty string,
-   *     only if {@code allowEmpty} is false.
-   * @return The String the user entered. If {@code allowEmpty} is true, this can be an empty
+   * @param emptyErrorMessage The error message to display when the user enters an empty string. To
+   *     not check for an empty user-entered string, pass {@code null}.
+   * @return The String the user entered. If {@code emptyErrorMessage} is null, this can be an empty
    *     string. It is always trimmed of excess whitespace.
    * @throws UserCancelledException Thrown when the user presses the cancel button.
    */
-  private static String promptString(final String message, final boolean allowEmpty,
-      final String emptyErrorMessage) throws UserCancelledException {
+  private static String promptString(final String message, final String emptyErrorMessage)
+      throws UserCancelledException {
     // Loop until we get a satisfactory answer
     while (true) {
       String choice =
@@ -424,7 +426,7 @@ public final class Main {
 
       choice = choice.trim();
 
-      if (!allowEmpty && choice.isEmpty()) {
+      if ((emptyErrorMessage != null) && choice.isEmpty()) {
         JOptionPane.showMessageDialog(null, emptyErrorMessage, "Hotel", JOptionPane.ERROR_MESSAGE);
         continue;
       }
@@ -434,7 +436,7 @@ public final class Main {
   }
 
   /**
-   * Prompts the user to select an integer from a list
+   * Prompts the user to select an integer from a list.
    * @param min The minimum integer to display (inclusive).
    * @param max The maximum integer to display (inclusive).
    * @param message The message to show to the user.

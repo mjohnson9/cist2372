@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="67e31166-05f5-41e9-8576-c2150b9e06e6" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/johnson/michael/hotel/DoubleSuiteHotelRooms.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/johnson/michael/hotel/DoubleSuiteHotelRooms.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/johnson/michael/hotel/Hotel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/johnson/michael/hotel/Hotel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/johnson/michael/hotel/HotelRoom.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/johnson/michael/hotel/HotelRoom.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/johnson/michael/hotel/KingSuiteHotelRooms.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/johnson/michael/hotel/KingSuiteHotelRooms.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/johnson/michael/hotel/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/johnson/michael/hotel/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hotel Part 2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Hotel Part 2/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -16,12 +13,12 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+    <leaf>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/johnson/michael/hotel/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" selection-start-line="8" selection-end-line="8" />
+            <state relative-caret-position="196">
+              <caret line="54" column="28" selection-start-line="54" selection-start-column="28" selection-end-line="54" selection-end-column="28" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -78,6 +75,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -100,14 +99,12 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554652835078" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554652837069" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="run.code.analysis.last.selected.profile" value="aGoogle" />
@@ -150,18 +147,19 @@
       <workItem from="1554580727920" duration="15000" />
       <workItem from="1554586045168" duration="10000" />
       <workItem from="1554589356134" duration="18000" />
-      <workItem from="1554652766510" duration="67000" />
+      <workItem from="1554652766510" duration="99000" />
+      <workItem from="1554652882711" duration="36000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14229000" />
+    <option name="totallyTimeSpent" value="14297000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1920" height="1009" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2657082" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2683706" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -183,7 +181,7 @@
       <window_info anchor="bottom" id="Messages" order="12" weight="0.32932165" />
       <window_info anchor="bottom" id="Database Changes" order="13" />
       <window_info anchor="bottom" id="Version Control" order="14" />
-      <window_info anchor="bottom" id="Inspection Results" order="15" weight="0.3293348" />
+      <window_info active="true" anchor="bottom" id="Inspection Results" order="15" visible="true" weight="0.3293348" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -278,8 +276,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/johnson/michael/hotel/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
+        <state relative-caret-position="196">
+          <caret line="54" column="28" selection-start-line="54" selection-start-column="28" selection-end-line="54" selection-end-column="28" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="67e31166-05f5-41e9-8576-c2150b9e06e6" name="Default Changelist" comment="" />
+    <list default="true" id="67e31166-05f5-41e9-8576-c2150b9e06e6" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../Hotel Part 1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Hotel Part 1/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/johnson/michael/hotel/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/johnson/michael/hotel/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/johnson/michael/hotel/Reservation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/johnson/michael/hotel/Reservation.java" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -12,35 +17,34 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/johnson/michael/hotel/exceptions/UserCancelledException.java">
+        <entry file="file://$PROJECT_DIR$/src/johnson/michael/hotel/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="9" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="9" />
+            <state relative-caret-position="225">
+              <caret line="428" column="10" selection-start-line="428" selection-start-column="10" selection-end-line="428" selection-end-column="10" />
               <folding>
-                <element signature="e#343#344#0" expanded="true" />
-                <element signature="e#388#389#0" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/johnson/michael/hotel/Guest.java">
+        <entry file="file://$PROJECT_DIR$/src/johnson/michael/hotel/Hotel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="245">
-              <caret line="117" column="50" selection-start-line="117" selection-start-column="50" selection-end-line="117" selection-end-column="50" />
+            <state relative-caret-position="15">
+              <caret line="10" column="5" lean-forward="true" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/johnson/michael/hotel/Main.java">
+        <entry file="file://$PROJECT_DIR$/src/johnson/michael/hotel/Reservation.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="261">
-              <caret line="69" column="18" lean-forward="true" selection-start-line="69" selection-start-column="18" selection-end-line="69" selection-end-column="18" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="324">
+              <caret line="200" column="4" selection-start-line="200" selection-start-column="4" selection-end-line="200" selection-end-column="4" />
             </state>
           </provider>
         </entry>
@@ -63,6 +67,7 @@
     <findStrings>
       <find>noinspection</find>
       <find>@Suppres</find>
+      <find>noinspe</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -85,8 +90,8 @@
         <option value="$PROJECT_DIR$/src/johnson/michael/hotel/ReservationStatus.java" />
         <option value="$PROJECT_DIR$/src/johnson/michael/hotel/exceptions/UserCancelledException.java" />
         <option value="$PROJECT_DIR$/src/johnson/michael/hotel/Status.java" />
-        <option value="$PROJECT_DIR$/src/johnson/michael/hotel/Reservation.java" />
         <option value="$PROJECT_DIR$/src/johnson/michael/hotel/Main.java" />
+        <option value="$PROJECT_DIR$/src/johnson/michael/hotel/Reservation.java" />
       </list>
     </option>
   </component>
@@ -103,7 +108,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -133,7 +138,7 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -147,7 +152,7 @@
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="run.code.analysis.last.selected.profile" value="aGoogle" />
-    <property name="settings.editor.selected.configurable" value="settings.saveactions" />
+    <property name="settings.editor.selected.configurable" value="settings.findbugs.project" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -185,17 +190,19 @@
       <workItem from="1554579513050" duration="81000" />
       <workItem from="1554579655918" duration="2034000" />
       <workItem from="1554582202243" duration="10474000" />
+      <workItem from="1554652870435" duration="10000" />
+      <workItem from="1554652920883" duration="892000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26627000" />
+    <option name="totallyTimeSpent" value="27529000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1920" height="1009" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2603834" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2657082" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -254,13 +261,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_201.jdk/Contents/Home/jre/lib/rt.jar!/sun/misc/Unsafe.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="353" column="21" selection-start-line="353" selection-start-column="21" selection-end-line="353" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/johnson/michael/hotel/KingHotelRooms.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
@@ -313,16 +313,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/johnson/michael/hotel/Hotel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/johnson/michael/hotel/exceptions/NoVacancyException.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -355,13 +345,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/johnson/michael/hotel/Reservation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="822">
-          <caret line="55" column="28" selection-start-line="55" selection-start-column="28" selection-end-line="55" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/johnson/michael/hotel/exceptions/UserCancelledException.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
@@ -373,20 +356,44 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_201.jdk/Contents/Home/jre/lib/rt.jar!/sun/misc/Unsafe.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="159">
+          <caret line="353" column="33" selection-start-line="353" selection-start-column="33" selection-end-line="353" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/johnson/michael/hotel/Guest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="245">
-          <caret line="117" column="50" selection-start-line="117" selection-start-column="50" selection-end-line="117" selection-end-column="50" />
+        <state relative-caret-position="496">
+          <caret line="49" column="4" selection-start-line="49" selection-start-column="4" selection-end-line="49" selection-end-column="4" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/johnson/michael/hotel/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="261">
-          <caret line="69" column="18" lean-forward="true" selection-start-line="69" selection-start-column="18" selection-end-line="69" selection-end-column="18" />
+        <state relative-caret-position="225">
+          <caret line="428" column="10" selection-start-line="428" selection-start-column="10" selection-end-line="428" selection-end-column="10" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/johnson/michael/hotel/Hotel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="10" column="5" lean-forward="true" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/johnson/michael/hotel/Reservation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="200" column="4" selection-start-line="200" selection-start-column="4" selection-end-line="200" selection-end-column="4" />
         </state>
       </provider>
     </entry>

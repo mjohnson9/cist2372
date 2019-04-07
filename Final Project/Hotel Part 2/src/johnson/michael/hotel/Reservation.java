@@ -188,14 +188,19 @@ public class Reservation implements ReservationStatus {
     this.calculateTotalCost();
   }
 
+  /**
+   * Recalculates {@code totalCostForTheStay} based on {@code hotelRoom.getAverageNightlyPrice()}
+   * and {@code numberOfNights}.
+   */
   private void calculateTotalCost() {
     if (this.hotelRoom == null) {
       // We can't calculate a total without a HotelRoom
       this.setTotalCostForTheStay(0.00d);
       return;
     }
+
     this.setTotalCostForTheStay(
-        ((double) this.numberOfNights) * this.hotelRoom.getAverageNightlyPrice());
+        ((double) this.getNumberOfNights()) * this.hotelRoom.getAverageNightlyPrice());
   }
 
   /**
