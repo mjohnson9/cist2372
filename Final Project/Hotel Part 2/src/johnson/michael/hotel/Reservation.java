@@ -1,5 +1,7 @@
 package johnson.michael.hotel;
 
+import johnson.michael.hotel.exceptions.NoVacancyException;
+
 /**
  * Represents a reservation for a hotel room.
  */
@@ -31,7 +33,7 @@ public class Reservation implements ReservationStatus {
    */
   private Guest guest;
   /**
-   * The room assigned to the reservation.
+   * The currently occupied hotel room. Only set after check in.
    */
   private HotelRoom hotelRoom;
   /**
@@ -47,19 +49,19 @@ public class Reservation implements ReservationStatus {
    * Constructs a new instance of this class.
    * @param hotel The {@see Hotel} that the reservation is at.
    * @param guest The {@see Guest} that the reservation is for.
-   * @param room The {@see HotelRoom} that has been reserved.
+   * @param roomType The {@see RoomType} that was booked.
    * @param numberOfNights The number of nights that the guest will be staying.
    */
   public Reservation(
-      final Hotel hotel, final Guest guest, final HotelRoom room, final int numberOfNights) {
+      final Hotel hotel, final Guest guest, final RoomType roomType, final int numberOfNights) {
     this.reservationNumber = currentReservationNumber;
     currentReservationNumber += 1;
 
     this.setStatus(Status.INVALID);
     this.setGuest(guest);
     this.setHotel(hotel);
-    this.setHotelRoom(room);
-    this.setRoomType(room.getRoomType());
+    this.setHotelRoom(null);
+    this.setRoomType(roomType);
     this.setNumberOfNights(numberOfNights); // totalCostForTheStay will be calculated by this call
   }
 
@@ -137,21 +139,22 @@ public class Reservation implements ReservationStatus {
   }
 
   /**
-   * Retrieves the hotel room assigned to the reservation.
-   * @return The hotel room assigned to the reservation.
+   * Retrieves the hotel room occupied by the reservation. If the reservation hasn't checked in yet,
+   * this is {@code null}.
+   * @return The hotel room occupied by the reservation or {@code null} if the reservation hasn't
+   *     checked in yet.
    */
   public HotelRoom getHotelRoom() {
     return this.hotelRoom;
   }
 
   /**
-   * Sets the reservation's hotel room.
-   * @param hotelRoom The new hotel room for the reservation.
+   * Sets the hotel room occupied by the reservation. This should only be set once the reservation
+   * is checked in.
+   * @param hotelRoom The new {@see HotelRoom} for the reservation.
    */
   public void setHotelRoom(final HotelRoom hotelRoom) {
     this.hotelRoom = hotelRoom;
-    // We need to recalculate the total cost because the average nightly price may have changed
-    this.calculateTotalCost();
   }
 
   /**
@@ -193,14 +196,19 @@ public class Reservation implements ReservationStatus {
    * and {@code numberOfNights}.
    */
   private void calculateTotalCost() {
-    if (this.hotelRoom == null) {
-      // We can't calculate a total without a HotelRoom
-      this.setTotalCostForTheStay(0.00d);
-      return;
-    }
+    try {
+      HotelRoom hotelRoom = this.getHotelRoom();
+      if (hotelRoom == null) {
+        hotelRoom = this.getHotel().findRoom(this.getRoomType());
+      }
 
-    this.setTotalCostForTheStay(
-        ((double) this.getNumberOfNights()) * this.hotelRoom.getAverageNightlyPrice());
+      this.setTotalCostForTheStay(
+          ((double) this.getNumberOfNights()) * hotelRoom.getAverageNightlyPrice());
+    } catch (NoVacancyException e) {
+      // The hotel has no rooms of the type we reserved. This should never happen because a Hotel
+      // would have to remove rooms.
+      this.setTotalCostForTheStay(0.00d);
+    }
   }
 
   /**
@@ -208,14 +216,17 @@ public class Reservation implements ReservationStatus {
    * room occupied.
    */
   @Override
-  public void checkIn() {
+  public void checkIn() throws NoVacancyException {
     if (this.getStatus() == Status.VALID) {
       // The guest is already checked in
       return;
     }
 
+    final HotelRoom room = this.getHotel().findRoomForCheckIn(this.getRoomType());
+    this.setHotelRoom(room);
+
+    room.setVacant(false);
     this.setStatus(Status.VALID);
-    this.getHotelRoom().setVacant(false);
   }
 
   /**
@@ -233,7 +244,7 @@ public class Reservation implements ReservationStatus {
 
     final HotelRoom room = this.getHotelRoom();
     room.setVacant(true);
-    room.setReserved(false);
+    this.setHotelRoom(null);
     this.getHotel().removeReservation(this);
   }
 

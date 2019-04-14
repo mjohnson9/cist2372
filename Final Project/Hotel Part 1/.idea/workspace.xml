@@ -4,6 +4,20 @@
     <list default="true" id="67e31166-05f5-41e9-8576-c2150b9e06e6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Hotel Part 2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Hotel Part 2/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hotel Part 2/src/johnson/michael/hotel/BookHotelRoom.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Hotel Part 2/src/johnson/michael/hotel/BookHotelRoom.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hotel Part 2/src/johnson/michael/hotel/Hotel.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Hotel Part 2/src/johnson/michael/hotel/Hotel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hotel Part 2/src/johnson/michael/hotel/HotelRoom.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Hotel Part 2/src/johnson/michael/hotel/HotelRoom.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hotel Part 2/src/johnson/michael/hotel/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Hotel Part 2/src/johnson/michael/hotel/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hotel Part 2/src/johnson/michael/hotel/Reservation.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Hotel Part 2/src/johnson/michael/hotel/Reservation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hotel Part 2/src/johnson/michael/hotel/ReservationStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Hotel Part 2/src/johnson/michael/hotel/ReservationStatus.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hotel Part 3/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Hotel Part 3/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hotel Part 3/hotelRooms.dat" beforeDir="false" afterPath="$PROJECT_DIR$/../Hotel Part 3/hotelRooms.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hotel Part 3/src/johnson/michael/hotel/BookHotelRoom.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Hotel Part 3/src/johnson/michael/hotel/BookHotelRoom.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hotel Part 3/src/johnson/michael/hotel/Hotel.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Hotel Part 3/src/johnson/michael/hotel/Hotel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hotel Part 3/src/johnson/michael/hotel/HotelRoom.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Hotel Part 3/src/johnson/michael/hotel/HotelRoom.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hotel Part 3/src/johnson/michael/hotel/Reservation.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Hotel Part 3/src/johnson/michael/hotel/Reservation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hotel Part 3/src/johnson/michael/hotel/ReservationStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Hotel Part 3/src/johnson/michael/hotel/ReservationStatus.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hotel Part 3/src/johnson/michael/hotel/ui/MainMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Hotel Part 3/src/johnson/michael/hotel/ui/MainMenu.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -13,20 +27,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/johnson/michael/hotel/Main.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="196">
-              <caret line="54" column="28" selection-start-line="54" selection-start-column="28" selection-end-line="54" selection-end-column="28" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -65,7 +66,7 @@
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="y" value="23" />
     <option name="width" value="1920" />
-    <option name="height" value="1006" />
+    <option name="height" value="1015" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -149,17 +150,18 @@
       <workItem from="1554589356134" duration="18000" />
       <workItem from="1554652766510" duration="99000" />
       <workItem from="1554652882711" duration="36000" />
+      <workItem from="1554671019525" duration="10000" />
+      <workItem from="1555201178125" duration="12000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14297000" />
+    <option name="totallyTimeSpent" value="14319000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1920" height="1009" extended-state="6" />
-    <editor active="true" />
+    <frame x="0" y="23" width="1920" height="1015" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2683706" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2736954" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -276,8 +278,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/johnson/michael/hotel/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="54" column="28" selection-start-line="54" selection-start-column="28" selection-end-line="54" selection-end-column="28" />
+        <state relative-caret-position="361">
+          <caret line="65" column="25" lean-forward="true" selection-start-line="65" selection-start-column="25" selection-end-line="65" selection-end-column="25" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

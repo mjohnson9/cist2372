@@ -14,6 +14,7 @@ import javax.swing.ListSelectionModel;
 import johnson.michael.hotel.Hotel;
 import johnson.michael.hotel.Reservation;
 import johnson.michael.hotel.Status;
+import johnson.michael.hotel.exceptions.NoVacancyException;
 
 /**
  * The main menu for the reservation GUI. It contains a table listing all reservations as well as
@@ -135,8 +136,15 @@ public class MainMenu extends JFrame {
       return;
     }
 
-    reservation.checkIn();
-    this.reservationTableModel.reservationCheckedIn(selectedIndex);
+    try {
+      reservation.checkIn();
+      this.reservationTableModel.reservationCheckedIn(selectedIndex);
+    } catch (final NoVacancyException ex) {
+      JOptionPane.showMessageDialog(this,
+          "There are no vacant " + reservation.getRoomType() + " rooms.", "Error",
+          JOptionPane.ERROR_MESSAGE);
+      return;
+    }
   }
 
   /**

@@ -1,6 +1,5 @@
 package johnson.michael.hotel;
 
-import java.io.Serializable;
 import java.util.ArrayList;
 import johnson.michael.hotel.exceptions.NoVacancyException;
 import johnson.michael.hotel.exceptions.OverCapacityException;
@@ -8,8 +7,7 @@ import johnson.michael.hotel.exceptions.OverCapacityException;
 /**
  * Represents a Hotel. Allows booking of rooms as well as retrieving the room list.
  */
-@SuppressWarnings("ALL")
-public class Hotel implements BookHotelRoom, Serializable {
+public class Hotel implements BookHotelRoom {
   /**
    * The number of hotel room types.
    */
@@ -118,52 +116,6 @@ public class Hotel implements BookHotelRoom, Serializable {
     this.reservations.remove(reservation);
   }
 
-  /**
-   * Checks if the hotel has any vacant rooms.
-   * @return true if the hotel has a vacant room, false otherwise.
-   */
-  public boolean hasVacancy() {
-    for (final HotelRoom room : this.hotelRooms) {
-      if (room.isVacant()) {
-        return true;
-      }
-    }
-
-    return false;
-  }
-
-  @Override
-  public Reservation bookRoom(final RoomType roomType, final Guest guest, final int numberOfNights)
-      throws NoVacancyException, OverCapacityException {
-    final int partySize = guest.getNumberAdultsInParty() + guest.getNumberChildrenInParty();
-
-    for (final HotelRoom room : this.hotelRooms) {
-      if (room.getRoomType() != roomType) {
-        // Ignore this room, it's not of the correct type.
-        continue;
-      }
-
-      if (room.getCapacity() < partySize) {
-        // Fail fast: all rooms of a given type have the same capacity. We can throw an
-        // OverCapacityException here regardless of whether this particular room is booked or
-        // occupied.
-        throw new OverCapacityException(room.getCapacity(), partySize);
-      }
-
-      if (!room.isVacant() || room.isReserved()) {
-        // This room is occupied and/or reserved. We can't use it in a reservation.
-        continue;
-      }
-
-      final Reservation reservation = new Reservation(this, guest, room, numberOfNights);
-      room.setReserved(true);
-      this.reservations.add(reservation);
-      return reservation;
-    }
-
-    throw new NoVacancyException();
-  }
-
   @Override
   public boolean equals(final Object obj) {
     if (!(obj instanceof Hotel)) {
@@ -188,5 +140,86 @@ public class Hotel implements BookHotelRoom, Serializable {
   public String toString() {
     return "Hotel with " + this.hotelRooms.size() + " rooms\n"
         + (this.hasVacancy() ? "Not full" : "Full");
+  }
+
+  /**
+   * Checks if the hotel has any vacant rooms.
+   * @return true if the hotel has a vacant room, false otherwise.
+   */
+  public boolean hasVacancy() {
+    for (final HotelRoom room : this.hotelRooms) {
+      if (room.isVacant()) {
+        return true;
+      }
+    }
+
+    return false;
+  }
+
+  /**
+   * Finds a room of the given type. The room may or may not be vacant.
+   * @param roomType The type of room to find.
+   * @return A room of the requested type.
+   * @throws NoVacancyException If this Hotel has no rooms of the given type.
+   */
+  public HotelRoom findRoom(final RoomType roomType) throws NoVacancyException {
+    return this.findRoom(roomType, false);
+  }
+
+  /**
+   * Finds a room of a given type for check in.
+   * @param roomType The type of room to find.
+   * @return A vacant room of the given type.
+   * @throws NoVacancyException If this Hotel has no vacant rooms of the given type.
+   */
+  public HotelRoom findRoomForCheckIn(final RoomType roomType) throws NoVacancyException {
+    final HotelRoom room = this.findRoom(roomType, true);
+    return room;
+  }
+
+  @Override
+  public Reservation bookRoom(final RoomType roomType, final Guest guest, final int numberOfNights)
+      throws OverCapacityException, NoVacancyException {
+    final int partySize = guest.getNumberAdultsInParty() + guest.getNumberChildrenInParty();
+
+    final HotelRoom room = this.findRoom(roomType, false);
+
+    if (room.getCapacity() < partySize) {
+      // Fail fast: all rooms of a given type have the same capacity. We can throw an
+      // OverCapacityException here regardless of whether this particular room is booked or
+      // occupied.
+      throw new OverCapacityException(room.getCapacity(), partySize);
+    }
+
+    final Reservation reservation = new Reservation(this, guest, roomType, numberOfNights);
+    this.reservations.add(reservation);
+    return reservation;
+  }
+
+  /**
+   * Finds a room of a given type, optionally vacant.
+   * @param roomType The type of room to find.
+   * @param mustBeVacant If true, only a vacant room will be returned. If false, any room of the
+   *     given type will be returned.
+   * @return A room of the requested type, optionally vacant.
+   * @throws NoVacancyException If no room matching the parameters could be found.
+   */
+  private HotelRoom findRoom(final RoomType roomType, final boolean mustBeVacant)
+      throws NoVacancyException {
+    for (final HotelRoom room : this.hotelRooms) {
+      if (room.getRoomType() != roomType) {
+        // Ignore this room, it's not of the correct type.
+        continue;
+      }
+
+      if (mustBeVacant && !room.isVacant()) {
+        // Ignore this room; we have to find a vacant room and this one is occupied
+        continue;
+      }
+
+      return room;
+    }
+
+    throw new NoVacancyException();
   }
 }

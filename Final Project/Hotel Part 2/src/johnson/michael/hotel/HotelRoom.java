@@ -26,11 +26,6 @@ public abstract class HotelRoom {
   private boolean vacant = true;
 
   /**
-   * Whether or not the hotel room is reserved.
-   */
-  private boolean reserved = false;
-
-  /**
    * Retrieves the capacity of the hotel room.
    * @return The capacity of the hotel room.
    */
@@ -109,22 +104,6 @@ public abstract class HotelRoom {
    */
   public void setVacant(final boolean vacant) {
     this.vacant = vacant;
-  }
-
-  /**
-   * Checks if the hotel room has been reserved.
-   * @return True if the hotel room is reserved, false otherwise.
-   */
-  public boolean isReserved() {
-    return this.reserved;
-  }
-
-  /**
-   * Sets the hotel room's reserved status.
-   * @param reserved The new reserved status. True if the hotel room is reserved, false otherwise.
-   */
-  public void setReserved(final boolean reserved) {
-    this.reserved = reserved;
   }
 
   @Override

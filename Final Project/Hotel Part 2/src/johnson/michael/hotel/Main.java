@@ -170,7 +170,15 @@ public final class Main {
       return;
     }
 
-    reservation.checkIn();
+    try {
+      reservation.checkIn();
+    } catch (NoVacancyException e) {
+      JOptionPane.showMessageDialog(null,
+          "There are currently no " + reservation.getRoomType()
+              + " rooms available. Please try again later.",
+          "Hotel", JOptionPane.ERROR_MESSAGE);
+      return;
+    }
 
     final Guest guest = reservation.getGuest();
 

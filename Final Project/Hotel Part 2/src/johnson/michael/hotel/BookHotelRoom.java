@@ -16,9 +16,9 @@ public interface BookHotelRoom {
    *
    * @return A {@see Reservation} for the booked room.
    *
-   * @throws NoVacancyException When there are no rooms that can be booked.
    * @throws OverCapacityException When the party is too large for the room type.
+   * @throws NoVacancyException When the hotel has no rooms of the given {@code roomType}.
    */
   Reservation bookRoom(RoomType roomType, Guest guest, int numberOfNights)
-      throws NoVacancyException, OverCapacityException;
+      throws OverCapacityException, NoVacancyException;
 }
