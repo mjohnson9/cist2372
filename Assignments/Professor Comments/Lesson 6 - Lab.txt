@@ -1,0 +1,9 @@
+81%
+
+Design a class that has a static method named writeArray.(-5)
+
+Write a second method in the class named readArray.(-2)
+
+The method should take two arguments: the name of a file and a reference to an int array (-2)
+
+the files should be closed (-10)

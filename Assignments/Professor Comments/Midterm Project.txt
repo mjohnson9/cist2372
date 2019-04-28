@@ -1,0 +1,9 @@
+140/200
+
+No Ship - 25
+
+Write exception classes for the following error conditions -5
+
+Powerball Calculations missing - 20
+
+Powerball Calculations not correct - 10
