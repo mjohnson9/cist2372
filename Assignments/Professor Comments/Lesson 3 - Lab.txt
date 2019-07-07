@@ -1,0 +1,5 @@
+58%
+
+Password Verifier ﻿- ﻿Write a class that verifies that a password meets the stated criteria (-10)﻿
+
+Sum of Digits in a String - ﻿﻿ The program should also display the highest and lowest digits in the string. (-﻿32)

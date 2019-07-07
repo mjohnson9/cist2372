@@ -1,0 +1,8 @@
+68.75%
+
+Missing TestScore throwing IllegalArgumentException (-25)
+
+Retail Item - ﻿﻿﻿If the code in a method can throw a checked exception, the method:
+
+–must handle the exception, or
+it must have a throws clause listed in the method header (-6.25)﻿
