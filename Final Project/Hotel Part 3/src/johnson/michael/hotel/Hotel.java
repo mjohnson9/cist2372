@@ -1,5 +1,6 @@
 package johnson.michael.hotel;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import johnson.michael.hotel.exceptions.NoVacancyException;
 import johnson.michael.hotel.exceptions.OverCapacityException;
@@ -7,7 +8,7 @@ import johnson.michael.hotel.exceptions.OverCapacityException;
 /**
  * Represents a Hotel. Allows booking of rooms as well as retrieving the room list.
  */
-public class Hotel implements BookHotelRoom {
+public class Hotel implements BookHotelRoom, Serializable {
   /**
    * The number of hotel room types.
    */
